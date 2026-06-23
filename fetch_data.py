@@ -1,6 +1,10 @@
 """
 個股期貨動能排行 - 資料抓取腳本
 資料來源：臺灣期貨交易所 OpenAPI /DailyMarketReportFut
+欄位：Date, Contract, ContractMonth(Week), Open, High, Low, Last,
+      Change, %, Volume, SettlementPrice, OpenInterest,
+      BestBid, BestAsk, HistoricalHigh, HistoricalLow,
+      TradingHalt, TradingSession
 """
 import requests, json, sys
 from datetime import datetime, timezone, timedelta
@@ -22,6 +26,7 @@ NAME_MAP = {
     "DGF":"小型日月光期貨:3711","QFF":"小型玉晶光期貨:3406",
     "QWF":"小型穩懋期貨:3105","QCF":"小型群聯期貨:8299",
     "RFF":"小型元大台灣50期貨:0050","YDF":"小型南電期貨:8046",
+    "ZFF":"華邦電期貨:2344","BEF":"南亞科期貨:2408",
 }
 
 def get_name_stock(code):
@@ -30,6 +35,18 @@ def get_name_stock(code):
         name, sid = val.split(":", 1)
         return name, sid
     return code + "期貨", ""
+
+def to_float(s, default=0.0):
+    try:
+        return float(str(s).replace(",","").replace("%","").strip())
+    except:
+        return default
+
+def to_int(s, default=0):
+    try:
+        return int(str(s).replace(",","").strip())
+    except:
+        return default
 
 def fetch_daily_report():
     url = "https://openapi.taifex.com.tw/v1/DailyMarketReportFut"
@@ -41,57 +58,39 @@ def fetch_daily_report():
     return r.json()
 
 def process(raw):
-    # 印出前幾筆的欄位，方便 debug
-    if raw:
-        print(f"  欄位名稱: {list(raw[0].keys())}")
-        print(f"  第一筆範例: {raw[0]}")
-        sessions = set(d.get('TradingSession','') for d in raw[:100])
-        print(f"  TradingSession 值: {sessions}")
+    # 只取一般交易時段
+    regular = [r for r in raw if r.get("TradingSession","").strip() == "一般"]
+    print(f"  一般時段筆數: {len(regular)}")
 
-    # 每個商品代碼只取近月（成交量最大或合約月份最小）
-    # 不篩 TradingSession，直接取所有資料
+    # 每個合約代碼取成交量最大的那筆（近月）
     by_code = defaultdict(list)
-    for row in raw:
-        code = (row.get("ProductCode") or row.get("商品代號") or "").strip()
-        if not code:
-            continue
-        by_code[code].append(row)
+    for row in regular:
+        code = row.get("Contract","").strip()
+        if code:
+            by_code[code].append(row)
 
     results = []
     for code, rows in by_code.items():
-        # 優先取成交量最大的那筆（近月通常成交量最大）
-        def get_vol(r):
-            v = str(r.get("Volume") or r.get("成交量") or "0").replace(",","")
-            try: return int(v)
-            except: return 0
-
-        rows.sort(key=get_vol, reverse=True)
+        # 取成交量最大（近月）
+        rows.sort(key=lambda r: to_int(r.get("Volume",0)), reverse=True)
         row = rows[0]
 
-        def fnum(keys, default=0):
-            for k in keys:
-                v = str(row.get(k) or "").replace(",","").replace("%","").strip()
-                if v and v not in ("-","–",""):
-                    try: return float(v)
-                    except: pass
-            return default
-
-        close  = fnum(["Close","收盤價","SettlementPrice","結算價"])
-        change_rate = fnum(["%Change","漲跌%","ChangePercent"])
-        volume = int(fnum(["Volume","成交量"]))
-        oi     = int(fnum(["OpenInterest","未沖銷契約數","未平倉量"]))
+        close       = to_float(row.get("Last") or row.get("SettlementPrice", 0))
+        change_rate = to_float(row.get("%", 0))   # 欄位名稱就是 "%"
+        volume      = to_int(row.get("Volume", 0))
+        oi          = to_int(row.get("OpenInterest", 0))
 
         if volume == 0:
             continue
 
         name, stock_id = get_name_stock(code)
         results.append({
-            "contract": code,
-            "name": name,
-            "stockId": stock_id,
-            "close": close,
-            "changeRate": round(change_rate, 2),
-            "volume": volume,
+            "contract":    code,
+            "name":        name,
+            "stockId":     stock_id,
+            "close":       close,
+            "changeRate":  round(change_rate, 2),
+            "volume":      volume,
             "openInterest": oi,
         })
 
@@ -112,14 +111,14 @@ def main():
     print(f"  處理後筆數: {len(data)}")
 
     if not data:
-        print("  ⚠ 無有效資料")
+        print("  ⚠ 無有效資料，可能尚未收盤或非交易日")
         sys.exit(0)
 
     output = {
         "updateTime": now.strftime("%Y-%m-%d %H:%M"),
-        "date": now.strftime("%Y-%m-%d"),
-        "count": len(data),
-        "data": data,
+        "date":       now.strftime("%Y-%m-%d"),
+        "count":      len(data),
+        "data":       data,
     }
 
     with open("data.json", "w", encoding="utf-8") as f:
