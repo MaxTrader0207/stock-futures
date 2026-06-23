@@ -277,8 +277,8 @@ async function loadData() {
 
     try {
         const [txData, listData] = await Promise.all([
-            fetchJSON('https://www.wantgoo.com/futures/all-stock-futures-daily-transactions?top=2'),
-            fetchJSON('https://www.wantgoo.com/futures/all-stock-futures-list')
+            fetchJSON('https://wantgoo-proxy.maxwei6699.workers.dev/futures/all-stock-futures-daily-transactions?top=2'),
+            fetchJSON('https://wantgoo-proxy.maxwei6699.workers.dev/futures/all-stock-futures-list')
         ]);
 
         nameMap  = buildNameMap(Array.isArray(listData) ? listData : (listData.data || []));
