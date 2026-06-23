@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>個股期貨動能排行</title>
+    <style>
+        :root {
+            --bg: #f0f2f5;
+            --card: #ffffff;
+            --primary: #1a56db;
+            --primary-light: #e8efff;
+            --bull: #e53935;
+            --bull-bg: #fff0f0;
+            --bear: #2e7d32;
+            --bear-bg: #f0fff1;
+            --vol: #1565c0;
+            --vol-bg: #e8f0fe;
+            --neutral: #757575;
+            --text: #1a1a2e;
+            --muted: #8a8a9a;
+            --border: #e5e7eb;
+            --shadow: 0 1px 4px rgba(0,0,0,0.07);
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "Segoe UI", sans-serif;
+            background: var(--bg);
+            margin: 0; padding: 0;
+            color: var(--text);
+            -webkit-tap-highlight-color: transparent;
+        }
+        header {
+            background: var(--primary);
+            color: #fff;
+            padding: 14px 16px 12px;
+            position: sticky; top: 0; z-index: 100;
+            box-shadow: 0 2px 8px rgba(26,86,219,0.3);
+        }
+        .header-row { display: flex; align-items: center; justify-content: space-between; }
+        .header-title { font-size: 17px; font-weight: 700; letter-spacing: 0.5px; }
+        .header-meta { font-size: 11px; color: #b3c6ff; margin-top: 4px; }
+        #refresh-btn {
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            border-radius: 20px;
+            padding: 5px 12px;
+            font-size: 12px;
+            cursor: pointer;
+            display: flex; align-items: center; gap: 4px;
+        }
+        #refresh-btn.spinning svg { animation: spin 0.8s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .tabs {
+            display: flex;
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+            position: sticky; top: 57px; z-index: 99;
+        }
+        .tab {
+            flex: 1; text-align: center;
+            padding: 11px 0 10px;
+            font-size: 13px; font-weight: 600;
+            color: var(--muted);
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+        }
+        .tab.bull.active  { color: var(--bull); border-color: var(--bull); }
+        .tab.bear.active  { color: var(--bear); border-color: var(--bear); }
+        .tab.vol.active   { color: var(--vol);  border-color: var(--vol); }
+
+        .list-wrap { display: none; padding: 10px 10px 24px; }
+        .list-wrap.active { display: block; }
+
+        .card {
+            background: var(--card); border-radius: 10px;
+            padding: 13px 14px; margin-bottom: 8px;
+            box-shadow: var(--shadow);
+            display: flex; align-items: center; gap: 10px;
+        }
+        .rank {
+            width: 26px; height: 26px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 12px; font-weight: 700; flex-shrink: 0;
+        }
+        .rank.bull { background: var(--bull-bg); color: var(--bull); }
+        .rank.bear { background: var(--bear-bg); color: var(--bear); }
+        .rank.vol  { background: var(--vol-bg);  color: var(--vol); }
+
+        .card-body { flex: 1; min-width: 0; }
+        .stock-name {
+            font-size: 15px; font-weight: 700;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .contract-tag {
+            font-size: 10px; font-weight: 500;
+            background: #f0f0f0; color: #666;
+            padding: 1px 5px; border-radius: 4px; flex-shrink: 0;
+        }
+        .stock-meta { font-size: 11.5px; color: var(--muted); margin-top: 3px; }
+        .card-right { text-align: right; flex-shrink: 0; }
+        .stock-price { font-size: 16px; font-weight: 700; }
+        .stock-change { font-size: 13px; font-weight: 600; margin-top: 2px; }
+        .stock-change.bull { color: var(--bull); }
+        .stock-change.bear { color: var(--bear); }
+        .stock-change.flat { color: var(--neutral); }
+
+        .sort-bar {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 6px 2px 4px;
+        }
+        .sort-count { font-size: 12px; font-weight: 600; color: var(--text); }
+        select {
+            border: 1px solid var(--border); background: var(--card);
+            border-radius: 6px; padding: 4px 8px;
+            font-size: 12px; color: var(--text); cursor: pointer;
+        }
+
+        .skel-card {
+            background: var(--card); border-radius: 10px;
+            padding: 18px 14px; margin-bottom: 8px; box-shadow: var(--shadow);
+        }
+        .skel-line {
+            background: linear-gradient(90deg,#e8e8e8 25%,#f4f4f4 50%,#e8e8e8 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.2s infinite;
+            border-radius: 4px; height: 12px; margin-bottom: 8px;
+        }
+        .skel-line.w60 { width: 60%; }
+        .skel-line.w35 { width: 35%; }
+        @keyframes shimmer { to { background-position: -200% 0; } }
+
+        /* ─── CORS info banner ─── */
+        .info-banner {
+            background: #fffbea; border: 1px solid #f5d000;
+            border-radius: 10px; padding: 14px 16px; margin: 8px 0;
+            font-size: 13px; line-height: 1.6;
+        }
+        .info-banner .title { font-weight: 700; font-size: 14px; margin-bottom: 6px; }
+        .info-banner .steps { margin: 8px 0 10px; padding-left: 18px; }
+        .info-banner .steps li { margin-bottom: 4px; }
+        .dl-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: var(--primary); color: #fff;
+            border: none; border-radius: 8px;
+            padding: 8px 16px; font-size: 13px; font-weight: 600;
+            cursor: pointer; text-decoration: none;
+        }
+        .dl-btn:active { opacity: 0.85; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-row">
+        <div>
+            <div class="header-title">📊 個股期貨動能排行</div>
+            <div class="header-meta" id="update-time">載入中…</div>
+        </div>
+        <button id="refresh-btn" onclick="loadData()">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/>
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+            </svg>
+            重新整理
+        </button>
+    </div>
+</header>
+
+<div class="tabs">
+    <div class="tab bull active" onclick="switchTab('bull',this)">🔴 多方前20</div>
+    <div class="tab bear"       onclick="switchTab('bear',this)">🟢 空方前20</div>
+    <div class="tab vol"        onclick="switchTab('vol',this)">🔵 成交量前20</div>
+</div>
+
+<div id="bull-wrap" class="list-wrap active">
+    <div class="sort-bar">
+        <span class="sort-count" id="bull-count"></span>
+        <select id="sort-bull" onchange="renderAll()">
+            <option value="oi_desc">按未平倉↓</option>
+            <option value="change_desc">按漲幅↓</option>
+            <option value="vol_desc">按成交量↓</option>
+        </select>
+    </div>
+    <div id="bull-list"></div>
+</div>
+
+<div id="bear-wrap" class="list-wrap">
+    <div class="sort-bar">
+        <span class="sort-count" id="bear-count"></span>
+        <select id="bear-sort" onchange="renderAll()">
+            <option value="oi_desc">按未平倉↓</option>
+            <option value="change_asc">按跌幅↓</option>
+            <option value="vol_desc">按成交量↓</option>
+        </select>
+    </div>
+    <div id="bear-list"></div>
+</div>
+
+<div id="vol-wrap" class="list-wrap">
+    <div class="sort-bar">
+        <span class="sort-count" id="vol-count"></span>
+        <select id="vol-sort" onchange="renderAll()">
+            <option value="vol_desc">按成交量↓</option>
+            <option value="change_desc">按漲幅↓</option>
+            <option value="oi_desc">按未平倉↓</option>
+        </select>
+    </div>
+    <div id="vol-list"></div>
+</div>
+
+<script>
+let allData = [];
+let nameMap = {};
+let currentTab = 'bull';
+
+function switchTab(tab, el) {
+    currentTab = tab;
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    document.querySelectorAll('.list-wrap').forEach(w => w.classList.remove('active'));
+    document.getElementById(tab + '-wrap').classList.add('active');
+}
+
+async function fetchJSON(url) {
+    const res = await fetch(url, { headers: { 'Accept': 'application/json' }, cache: 'no-store' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return res.json();
+}
+
+function buildNameMap(list) {
+    const map = {};
+    for (const item of list) {
+        const raw  = (item.id || '').replace(/&$/, '');
+        const code = raw.startsWith('W') ? raw.slice(1) : raw;
+        map[code]  = { name: item.name || code, stockId: item.stockId || '' };
+    }
+    return map;
+}
+
+function showSkeletons(id, n = 8) {
+    document.getElementById(id).innerHTML = Array.from({length: n}, () =>
+        `<div class="skel-card"><div class="skel-line w60"></div><div class="skel-line w35"></div></div>`
+    ).join('');
+}
+
+function showCorsHint(ids) {
+    // detect if running inside an iframe (Claude artifact sandbox)
+    const inSandbox = (() => { try { return window.self !== window.top; } catch(e) { return true; } })();
+
+    const html = `
+    <div class="info-banner">
+        <div class="title">⚠️ 無法在此預覽（CORS 限制）</div>
+        ${inSandbox
+            ? `此頁面在 Claude 沙箱環境中無法呼叫外部 API，<strong>下載後用瀏覽器開啟即可正常使用。</strong>`
+            : `無法連線至玩股網，請確認網路連線後重試。`
+        }
+        ${inSandbox ? `
+        <ol class="steps">
+            <li>點擊右上角 <strong>Download</strong> 按鈕下載 HTML 檔案</li>
+            <li>用 <strong>Chrome / Safari / Edge</strong> 開啟該檔案</li>
+            <li>頁面會自動載入最新資料 ✅</li>
+        </ol>` : ''}
+    </div>`;
+    ids.forEach(id => { document.getElementById(id).innerHTML = html; });
+}
+
+async function loadData() {
+    const btn = document.getElementById('refresh-btn');
+    btn.classList.add('spinning');
+    document.getElementById('update-time').textContent = '載入中…';
+    showSkeletons('bull-list');
+    showSkeletons('bear-list');
+    showSkeletons('vol-list');
+
+    try {
+        const [txData, listData] = await Promise.all([
+            fetchJSON('https://www.wantgoo.com/futures/all-stock-futures-daily-transactions?top=2'),
+            fetchJSON('https://www.wantgoo.com/futures/all-stock-futures-list')
+        ]);
+
+        nameMap  = buildNameMap(Array.isArray(listData) ? listData : (listData.data || []));
+        allData  = Array.isArray(txData)  ? txData  : (txData.data  || []);
+
+        const now = new Date();
+        const pad = n => String(n).padStart(2,'0');
+        document.getElementById('update-time').textContent =
+            `更新：${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}`;
+
+        renderAll();
+    } catch(e) {
+        document.getElementById('update-time').textContent = '載入失敗';
+        showCorsHint(['bull-list','bear-list','vol-list']);
+    } finally {
+        btn.classList.remove('spinning');
+    }
+}
+
+function sortRows(rows, key) {
+    const r = [...rows];
+    if (key === 'oi_desc')     return r.sort((a,b) => (b.openInterest||0) - (a.openInterest||0));
+    if (key === 'change_desc') return r.sort((a,b) => (b.changeRate||0) - (a.changeRate||0));
+    if (key === 'change_asc')  return r.sort((a,b) => (a.changeRate||0) - (b.changeRate||0));
+    if (key === 'vol_desc')    return r.sort((a,b) => (b.totalVolume||0) - (a.totalVolume||0));
+    return r;
+}
+
+function renderAll() {
+    if (!allData.length) return;
+    const bulls = allData.filter(d => (d.changeRate || 0) > 0);
+    const bears = allData.filter(d => (d.changeRate || 0) < 0);
+
+    const topBull = sortRows(bulls, document.getElementById('sort-bull').value).slice(0, 20);
+    const topBear = sortRows(bears, document.getElementById('bear-sort').value).slice(0, 20);
+    const topVol  = sortRows(allData, document.getElementById('vol-sort').value).slice(0, 20);
+
+    document.getElementById('bull-count').textContent = `共 ${bulls.length} 檔上漲`;
+    document.getElementById('bear-count').textContent = `共 ${bears.length} 檔下跌`;
+    document.getElementById('vol-count').textContent  = `共 ${allData.length} 檔`;
+
+    renderList('bull-list', topBull, 'bull');
+    renderList('bear-list', topBear, 'bear');
+    renderList('vol-list',  topVol,  'vol');
+}
+
+function renderList(containerId, rows, type) {
+    const el = document.getElementById(containerId);
+    if (!rows.length) { el.innerHTML = '<div class="info-banner">暫無資料</div>'; return; }
+    el.innerHTML = rows.map((d, i) => {
+        const code    = d.contract || '';
+        const info    = nameMap[code] || {};
+        const name    = info.name || (code + '期貨');
+        const stockId = info.stockId || '';
+        const price   = d.lastPrice ?? d.closePrice ?? '–';
+        const rate    = d.changeRate ?? 0;
+        const oi      = d.openInterest ?? 0;
+        const vol     = d.totalVolume ?? 0;
+
+        const rateStr   = rate > 0 ? `▲ ${rate.toFixed(2)}%` : rate < 0 ? `▼ ${Math.abs(rate).toFixed(2)}%` : '–';
+        const rateClass = rate > 0 ? 'bull' : rate < 0 ? 'bear' : 'flat';
+        const metaLabel = type === 'vol'
+            ? `成交量：${vol.toLocaleString()} 口`
+            : `未平倉：${oi.toLocaleString()} 口　成交量：${vol.toLocaleString()} 口`;
+
+        return `<div class="card">
+            <div class="rank ${type}">${i+1}</div>
+            <div class="card-body">
+                <div class="stock-name">${name}${stockId ? `<span class="contract-tag">${stockId}</span>` : ''}</div>
+                <div class="stock-meta">${metaLabel}</div>
+            </div>
+            <div class="card-right">
+                <div class="stock-price">${typeof price==='number' ? price.toLocaleString() : price}</div>
+                <div class="stock-change ${rateClass}">${rateStr}</div>
+            </div>
+        </div>`;
+    }).join('');
+}
+
+loadData();
+</script>
+</body>
+</html>
