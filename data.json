@@ -1,1222 +1,1222 @@
 {
-  "updateTime": "2026-06-25 18:25",
-  "date": "2026-06-25",
-  "count": 325,
+  "updateTime": "2026-06-26 18:37",
+  "date": "2026-06-26",
+  "count": 326,
   "data": [
     {
       "contract": "ZFF",
       "name": "華邦電期貨",
       "stockId": "2344",
-      "close": 3145.0,
-      "changeRate": -1.92,
-      "volume": 630,
-      "openInterest": 256
+      "close": 3165.6,
+      "changeRate": 0.44,
+      "volume": 423,
+      "openInterest": 226
     },
     {
       "contract": "ZEF",
       "name": "ZEF期貨",
       "stockId": "",
-      "close": 2997.65,
-      "changeRate": -2.62,
-      "volume": 1144,
-      "openInterest": 459
+      "close": 2998.8,
+      "changeRate": 0.03,
+      "volume": 845,
+      "openInterest": 513
     },
     {
       "contract": "XJF",
       "name": "XJF期貨",
       "stockId": "",
-      "close": 160.59,
-      "changeRate": 0.22,
-      "volume": 20,
-      "openInterest": 625
+      "close": 160.77,
+      "changeRate": 0.11,
+      "volume": 60,
+      "openInterest": 628
     },
     {
       "contract": "XIF",
       "name": "XIF期貨",
       "stockId": "",
-      "close": 15512.0,
-      "changeRate": 0.81,
-      "volume": 89,
-      "openInterest": 63
+      "close": 15484.0,
+      "changeRate": -0.42,
+      "volume": 65,
+      "openInterest": 65
     },
     {
       "contract": "XEF",
       "name": "XEF期貨",
       "stockId": "",
-      "close": 1.1461,
-      "changeRate": -0.39,
-      "volume": 50,
-      "openInterest": 0
+      "close": 1.1406,
+      "changeRate": 0.12,
+      "volume": 70,
+      "openInterest": 81
     },
     {
       "contract": "XBF",
       "name": "XBF期貨",
       "stockId": "",
-      "close": 1.3195,
-      "changeRate": -0.34,
-      "volume": 46,
-      "openInterest": 32
+      "close": 1.3183,
+      "changeRate": -0.09,
+      "volume": 21,
+      "openInterest": 50
     },
     {
       "contract": "XAF",
       "name": "XAF期貨",
       "stockId": "",
-      "close": 0.6892,
-      "changeRate": -0.92,
-      "volume": 3,
-      "openInterest": 9
+      "close": 0.6882,
+      "changeRate": -0.15,
+      "volume": 5,
+      "openInterest": 8
     },
     {
       "contract": "VKF",
       "name": "VKF期貨",
       "stockId": "",
-      "close": 829.0,
-      "changeRate": 4.41,
-      "volume": 478,
-      "openInterest": 2193
+      "close": 883.0,
+      "changeRate": 6.39,
+      "volume": 778,
+      "openInterest": 2227
     },
     {
       "contract": "VJF",
       "name": "VJF期貨",
       "stockId": "",
-      "close": 418.5,
-      "changeRate": -3.01,
-      "volume": 366,
-      "openInterest": 876
+      "close": 413.5,
+      "changeRate": -1.19,
+      "volume": 187,
+      "openInterest": 824
     },
     {
       "contract": "VIF",
       "name": "VIF期貨",
       "stockId": "",
-      "close": 471.0,
-      "changeRate": -2.59,
-      "volume": 10,
-      "openInterest": 68
+      "close": 477.5,
+      "changeRate": 1.38,
+      "volume": 2,
+      "openInterest": 66
     },
     {
       "contract": "VHF",
       "name": "VHF期貨",
       "stockId": "",
-      "close": 63.6,
-      "changeRate": -2.15,
+      "close": 63.35,
+      "changeRate": -0.39,
       "volume": 11,
-      "openInterest": 355
+      "openInterest": 352
     },
     {
       "contract": "VGF",
       "name": "VGF期貨",
       "stockId": "",
-      "close": 1275.0,
-      "changeRate": -0.78,
-      "volume": 1419,
-      "openInterest": 4712
+      "close": 1250.0,
+      "changeRate": -1.96,
+      "volume": 1012,
+      "openInterest": 4629
     },
     {
       "contract": "VFF",
       "name": "VFF期貨",
       "stockId": "",
-      "close": 2040.0,
-      "changeRate": -0.24,
-      "volume": 905,
-      "openInterest": 5208
+      "close": 1945.0,
+      "changeRate": -4.66,
+      "volume": 586,
+      "openInterest": 5239
     },
     {
       "contract": "VEF",
       "name": "VEF期貨",
       "stockId": "",
-      "close": 2025.0,
-      "changeRate": -0.98,
-      "volume": 29,
-      "openInterest": 334
+      "close": 1950.0,
+      "changeRate": -4.41,
+      "volume": 17,
+      "openInterest": 329
     },
     {
       "contract": "VDF",
       "name": "VDF期貨",
       "stockId": "",
       "close": 2200.0,
-      "changeRate": -2.44,
-      "volume": 361,
-      "openInterest": 1862
+      "changeRate": 0.69,
+      "volume": 141,
+      "openInterest": 1874
     },
     {
       "contract": "VCF",
       "name": "VCF期貨",
       "stockId": "",
-      "close": 151.5,
-      "changeRate": 3.77,
-      "volume": 28,
-      "openInterest": 197
+      "close": 147.5,
+      "changeRate": -2.64,
+      "volume": 38,
+      "openInterest": 199
     },
     {
       "contract": "VBF",
       "name": "VBF期貨",
       "stockId": "",
-      "close": 58.5,
-      "changeRate": 1.74,
-      "volume": 292,
-      "openInterest": 2781
+      "close": 56.5,
+      "changeRate": -3.42,
+      "volume": 191,
+      "openInterest": 2796
     },
     {
       "contract": "UZF",
       "name": "UZF期貨",
       "stockId": "",
-      "close": 1265.0,
-      "changeRate": 0.8,
-      "volume": 821,
-      "openInterest": 4560
+      "close": 1360.0,
+      "changeRate": 7.51,
+      "volume": 2088,
+      "openInterest": 4562
     },
     {
       "contract": "UYF",
       "name": "UYF期貨",
       "stockId": "",
-      "close": 304.5,
-      "changeRate": 0.66,
-      "volume": 118,
-      "openInterest": 939
+      "close": 308.5,
+      "changeRate": 1.31,
+      "volume": 83,
+      "openInterest": 938
     },
     {
       "contract": "UXF",
       "name": "UXF期貨",
       "stockId": "",
-      "close": 56.7,
-      "changeRate": 3.47,
-      "volume": 183,
-      "openInterest": 1022
+      "close": 56.5,
+      "changeRate": -0.35,
+      "volume": 308,
+      "openInterest": 1033
     },
     {
       "contract": "UWF",
       "name": "UWF期貨",
       "stockId": "",
-      "close": 7250.0,
-      "changeRate": 7.81,
-      "volume": 1002,
-      "openInterest": 2586
-    },
-    {
-      "contract": "UVF",
-      "name": "UVF期貨",
-      "stockId": "",
-      "close": 7240.0,
-      "changeRate": 7.66,
-      "volume": 5,
-      "openInterest": 46
+      "close": 7000.0,
+      "changeRate": -3.45,
+      "volume": 881,
+      "openInterest": 2761
     },
     {
       "contract": "UUF",
       "name": "UUF期貨",
       "stockId": "",
-      "close": 63.5,
-      "changeRate": 2.09,
-      "volume": 181,
-      "openInterest": 261
+      "close": 65.7,
+      "changeRate": 3.46,
+      "volume": 148,
+      "openInterest": 285
     },
     {
       "contract": "UTF",
       "name": "UTF期貨",
       "stockId": "",
-      "close": 257.0,
-      "changeRate": -3.93,
-      "volume": 156,
-      "openInterest": 1089
-    },
-    {
-      "contract": "USF",
-      "name": "USF期貨",
-      "stockId": "",
-      "close": 127.5,
-      "changeRate": 0.83,
-      "volume": 1,
-      "openInterest": 19
+      "close": 251.5,
+      "changeRate": -2.14,
+      "volume": 152,
+      "openInterest": 1141
     },
     {
       "contract": "UQF",
       "name": "UQF期貨",
       "stockId": "",
-      "close": 449.5,
-      "changeRate": 2.39,
-      "volume": 34,
-      "openInterest": 427
+      "close": 422.5,
+      "changeRate": -5.9,
+      "volume": 108,
+      "openInterest": 390
     },
     {
       "contract": "UPF",
       "name": "UPF期貨",
       "stockId": "",
-      "close": 449.0,
-      "changeRate": 2.28,
-      "volume": 2,
-      "openInterest": 421
+      "close": 441.0,
+      "changeRate": -1.78,
+      "volume": 11,
+      "openInterest": 428
     },
     {
       "contract": "UOF",
       "name": "UOF期貨",
       "stockId": "",
-      "close": 4400.0,
-      "changeRate": 0.69,
-      "volume": 1541,
-      "openInterest": 3478
+      "close": 4280.0,
+      "changeRate": -2.39,
+      "volume": 1939,
+      "openInterest": 3406
     },
     {
       "contract": "UNF",
       "name": "UNF期貨",
       "stockId": "",
-      "close": 29912.0,
-      "changeRate": -0.89,
-      "volume": 987,
-      "openInterest": 673
+      "close": 30150.0,
+      "changeRate": 0.8,
+      "volume": 236,
+      "openInterest": 738
     },
     {
       "contract": "UMF",
       "name": "UMF期貨",
       "stockId": "",
-      "close": 4405.0,
-      "changeRate": 0.8,
-      "volume": 29,
+      "close": 4290.0,
+      "changeRate": -2.17,
+      "volume": 12,
       "openInterest": 127
     },
     {
       "contract": "ULF",
       "name": "ULF期貨",
       "stockId": "",
-      "close": 1070.0,
-      "changeRate": 4.39,
-      "volume": 870,
-      "openInterest": 3174
+      "close": 1020.0,
+      "changeRate": -4.67,
+      "volume": 831,
+      "openInterest": 3314
+    },
+    {
+      "contract": "UKF",
+      "name": "UKF期貨",
+      "stockId": "",
+      "close": 28.64,
+      "changeRate": 1.06,
+      "volume": 35,
+      "openInterest": 23
     },
     {
       "contract": "UJF",
       "name": "UJF期貨",
       "stockId": "",
-      "close": 15.1,
-      "changeRate": 0.47,
-      "volume": 7,
+      "close": 15.21,
+      "changeRate": 0.46,
+      "volume": 20,
       "openInterest": 872
     },
     {
       "contract": "UIF",
       "name": "UIF期貨",
       "stockId": "",
-      "close": 710.0,
-      "changeRate": 0.71,
-      "volume": 59,
-      "openInterest": 289
+      "close": 704.0,
+      "changeRate": -0.85,
+      "volume": 37,
+      "openInterest": 305
     },
     {
       "contract": "UHF",
       "name": "UHF期貨",
       "stockId": "",
-      "close": 2580.0,
-      "changeRate": 5.95,
-      "volume": 3647,
-      "openInterest": 4811
+      "close": 2525.0,
+      "changeRate": -1.94,
+      "volume": 2404,
+      "openInterest": 4810
     },
     {
       "contract": "UFF",
       "name": "UFF期貨",
       "stockId": "",
-      "close": 55.6,
-      "changeRate": 5.9,
-      "volume": 217,
-      "openInterest": 712
+      "close": 56.1,
+      "changeRate": 0.9,
+      "volume": 188,
+      "openInterest": 716
     },
     {
       "contract": "UEF",
       "name": "UEF期貨",
       "stockId": "",
-      "close": 41.7,
-      "changeRate": -0.6,
-      "volume": 8,
+      "close": 42.4,
+      "changeRate": 1.68,
+      "volume": 4,
       "openInterest": 30
     },
     {
       "contract": "UDF",
       "name": "UDF期貨",
       "stockId": "",
-      "close": 52063.0,
-      "changeRate": 0.22,
-      "volume": 10,
-      "openInterest": 138
+      "close": 52290.0,
+      "changeRate": 0.44,
+      "volume": 21,
+      "openInterest": 184
     },
     {
       "contract": "UBF",
       "name": "UBF期貨",
       "stockId": "",
-      "close": 830.0,
-      "changeRate": 4.53,
-      "volume": 61,
-      "openInterest": 931
+      "close": 889.0,
+      "changeRate": 7.11,
+      "volume": 95,
+      "openInterest": 936
     },
     {
       "contract": "UAF",
       "name": "UAF期貨",
       "stockId": "",
-      "close": 249.0,
-      "changeRate": 2.26,
-      "volume": 298,
-      "openInterest": 527
+      "close": 243.5,
+      "changeRate": -2.21,
+      "volume": 122,
+      "openInterest": 532
     },
     {
       "contract": "TX",
       "name": "TX期貨",
       "stockId": "",
-      "close": 46387.0,
-      "changeRate": -2.21,
-      "volume": 96199,
-      "openInterest": 104070
+      "close": 46544.0,
+      "changeRate": 0.3,
+      "volume": 70863,
+      "openInterest": 101138
     },
     {
       "contract": "TMF",
       "name": "TMF期貨",
       "stockId": "",
-      "close": 46374.0,
-      "changeRate": -2.24,
-      "volume": 264197,
-      "openInterest": 65872
+      "close": 46549.0,
+      "changeRate": 0.31,
+      "volume": 216294,
+      "openInterest": 63593
     },
     {
       "contract": "TJF",
       "name": "TJF期貨",
       "stockId": "",
-      "close": 3961.25,
-      "changeRate": -0.97,
-      "volume": 65,
-      "openInterest": 148
+      "close": 4025.5,
+      "changeRate": 1.61,
+      "volume": 78,
+      "openInterest": 53
     },
     {
       "contract": "TGF",
       "name": "TGF期貨",
       "stockId": "",
-      "close": 15897.5,
-      "changeRate": 0.74,
-      "volume": 57,
-      "openInterest": 284
+      "close": 15500.0,
+      "changeRate": -2.5,
+      "volume": 103,
+      "openInterest": 290
     },
     {
       "contract": "TF",
       "name": "TF期貨",
       "stockId": "",
-      "close": 3152.6,
-      "changeRate": -1.68,
-      "volume": 794,
-      "openInterest": 325
+      "close": 3164.2,
+      "changeRate": 0.4,
+      "volume": 653,
+      "openInterest": 395
     },
     {
       "contract": "TE",
       "name": "TE期貨",
       "stockId": "",
-      "close": 2996.0,
-      "changeRate": -2.68,
-      "volume": 667,
-      "openInterest": 384
+      "close": 2997.15,
+      "changeRate": -0.03,
+      "volume": 453,
+      "openInterest": 419
     },
     {
       "contract": "SZF",
       "name": "SZF期貨",
       "stockId": "",
-      "close": 515.0,
-      "changeRate": -4.28,
-      "volume": 839,
-      "openInterest": 1554
+      "close": 513.0,
+      "changeRate": -0.19,
+      "volume": 194,
+      "openInterest": 1581
     },
     {
       "contract": "SYF",
       "name": "SYF期貨",
       "stockId": "",
-      "close": 514.0,
-      "changeRate": -4.46,
-      "volume": 55,
-      "openInterest": 152
+      "close": 518.0,
+      "changeRate": 0.78,
+      "volume": 21,
+      "openInterest": 154
     },
     {
       "contract": "SXF",
       "name": "SXF期貨",
       "stockId": "",
-      "close": 13650.0,
-      "changeRate": -4.55,
-      "volume": 13,
-      "openInterest": 485
+      "close": 14170.0,
+      "changeRate": 3.81,
+      "volume": 3,
+      "openInterest": 271
     },
     {
       "contract": "SWF",
       "name": "SWF期貨",
       "stockId": "",
-      "close": 115.5,
-      "changeRate": -1.7,
-      "volume": 178,
-      "openInterest": 539
+      "close": 118.0,
+      "changeRate": 2.61,
+      "volume": 154,
+      "openInterest": 572
     },
     {
       "contract": "SVF",
       "name": "SVF期貨",
       "stockId": "",
-      "close": 7610.0,
-      "changeRate": 2.08,
-      "volume": 404,
-      "openInterest": 588
+      "close": 7390.0,
+      "changeRate": -2.89,
+      "volume": 654,
+      "openInterest": 597
     },
     {
       "contract": "SUF",
       "name": "SUF期貨",
       "stockId": "",
-      "close": 12.76,
-      "changeRate": -0.23,
-      "volume": 30,
-      "openInterest": 251
+      "close": 12.81,
+      "changeRate": 0.39,
+      "volume": 9,
+      "openInterest": 253
     },
     {
       "contract": "SSF",
       "name": "SSF期貨",
       "stockId": "",
-      "close": 53.2,
-      "changeRate": -0.65,
-      "volume": 35,
-      "openInterest": 237
+      "close": 53.4,
+      "changeRate": 0.38,
+      "volume": 40,
+      "openInterest": 241
     },
     {
       "contract": "SRF",
       "name": "SRF期貨",
       "stockId": "",
-      "close": 107.9,
-      "changeRate": -2.62,
-      "volume": 8350,
-      "openInterest": 12512
+      "close": 108.15,
+      "changeRate": 0.37,
+      "volume": 6368,
+      "openInterest": 12643
+    },
+    {
+      "contract": "SPF",
+      "name": "SPF期貨",
+      "stockId": "",
+      "close": 7474.75,
+      "changeRate": 0.28,
+      "volume": 1,
+      "openInterest": 59
     },
     {
       "contract": "SOF",
       "name": "SOF期貨",
       "stockId": "",
-      "close": 16904.0,
-      "changeRate": -2.32,
-      "volume": 17,
-      "openInterest": 68
+      "close": 16903.0,
+      "changeRate": 0.1,
+      "volume": 22,
+      "openInterest": 71
     },
     {
       "contract": "SNF",
       "name": "SNF期貨",
       "stockId": "",
-      "close": 31.53,
-      "changeRate": -1.25,
-      "volume": 39,
-      "openInterest": 166
+      "close": 32.01,
+      "changeRate": 1.52,
+      "volume": 38,
+      "openInterest": 170
     },
     {
       "contract": "SMF",
       "name": "SMF期貨",
       "stockId": "",
-      "close": 30.33,
-      "changeRate": -1.17,
-      "volume": 73,
-      "openInterest": 530
+      "close": 30.39,
+      "changeRate": 0.2,
+      "volume": 55,
+      "openInterest": 529
     },
     {
       "contract": "SLF",
       "name": "SLF期貨",
       "stockId": "",
-      "close": 339.5,
-      "changeRate": 2.72,
-      "volume": 889,
-      "openInterest": 1379
+      "close": 332.5,
+      "changeRate": -2.06,
+      "volume": 401,
+      "openInterest": 1401
     },
     {
       "contract": "SKF",
       "name": "SKF期貨",
       "stockId": "",
-      "close": 96.1,
-      "changeRate": 0.52,
-      "volume": 389,
-      "openInterest": 1840
+      "close": 94.7,
+      "changeRate": -1.46,
+      "volume": 469,
+      "openInterest": 1901
     },
     {
       "contract": "SJF",
       "name": "SJF期貨",
       "stockId": "",
-      "close": 100.5,
-      "changeRate": 0.0,
-      "volume": 10,
-      "openInterest": 227
+      "close": 99.0,
+      "changeRate": -1.49,
+      "volume": 15,
+      "openInterest": 232
     },
     {
       "contract": "SIF",
       "name": "SIF期貨",
       "stockId": "",
-      "close": 31.37,
-      "changeRate": 0.48,
-      "volume": 4,
-      "openInterest": 48
+      "close": 31.4,
+      "changeRate": 0.1,
+      "volume": 23,
+      "openInterest": 69
+    },
+    {
+      "contract": "SGF",
+      "name": "SGF期貨",
+      "stockId": "",
+      "close": 46.38,
+      "changeRate": -1.7,
+      "volume": 1,
+      "openInterest": 5
     },
     {
       "contract": "SFF",
       "name": "SFF期貨",
       "stockId": "",
-      "close": 5585.0,
-      "changeRate": -2.7,
-      "volume": 1762,
-      "openInterest": 2678
+      "close": 5620.0,
+      "changeRate": 0.72,
+      "volume": 2148,
+      "openInterest": 2592
     },
     {
       "contract": "SEF",
       "name": "SEF期貨",
       "stockId": "",
-      "close": 2460.0,
-      "changeRate": 0.82,
-      "volume": 1694,
-      "openInterest": 4240
+      "close": 2440.0,
+      "changeRate": -0.61,
+      "volume": 2629,
+      "openInterest": 4723
     },
     {
       "contract": "SDF",
       "name": "SDF期貨",
       "stockId": "",
-      "close": 184.0,
-      "changeRate": 2.22,
-      "volume": 1443,
-      "openInterest": 1735
+      "close": 181.5,
+      "changeRate": -1.36,
+      "volume": 979,
+      "openInterest": 1808
     },
     {
       "contract": "SCF",
       "name": "SCF期貨",
       "stockId": "",
-      "close": 221.0,
-      "changeRate": 1.61,
-      "volume": 34,
-      "openInterest": 554
+      "close": 225.5,
+      "changeRate": 2.04,
+      "volume": 200,
+      "openInterest": 573
     },
     {
       "contract": "SBF",
       "name": "SBF期貨",
       "stockId": "",
-      "close": 17.4,
-      "changeRate": 6.1,
-      "volume": 247,
-      "openInterest": 880
+      "close": 16.9,
+      "changeRate": -2.87,
+      "volume": 76,
+      "openInterest": 888
     },
     {
       "contract": "SAF",
       "name": "SAF期貨",
       "stockId": "",
-      "close": 195.0,
-      "changeRate": 0.78,
-      "volume": 20,
-      "openInterest": 316
+      "close": 190.0,
+      "changeRate": -2.56,
+      "volume": 16,
+      "openInterest": 323
     },
     {
       "contract": "RZF",
       "name": "RZF期貨",
       "stockId": "",
-      "close": 27.15,
-      "changeRate": 0.63,
-      "volume": 407,
-      "openInterest": 9818
+      "close": 27.39,
+      "changeRate": 0.88,
+      "volume": 53,
+      "openInterest": 9765
     },
     {
       "contract": "RYF",
       "name": "RYF期貨",
       "stockId": "",
-      "close": 43.5,
-      "changeRate": -2.64,
-      "volume": 20,
-      "openInterest": 11
+      "close": 43.25,
+      "changeRate": -0.57,
+      "volume": 10,
+      "openInterest": 1
     },
     {
       "contract": "RXF",
       "name": "RXF期貨",
       "stockId": "",
-      "close": 18.99,
-      "changeRate": -0.05,
-      "volume": 2,
-      "openInterest": 28
+      "close": 18.89,
+      "changeRate": -0.53,
+      "volume": 17,
+      "openInterest": 12
     },
     {
       "contract": "RWF",
       "name": "RWF期貨",
       "stockId": "",
-      "close": 4940.0,
-      "changeRate": 4.11,
-      "volume": 2467,
-      "openInterest": 5903
+      "close": 4865.0,
+      "changeRate": -1.52,
+      "volume": 7415,
+      "openInterest": 5979
     },
     {
       "contract": "RVF",
       "name": "RVF期貨",
       "stockId": "",
-      "close": 2015.0,
-      "changeRate": -3.36,
-      "volume": 10173,
-      "openInterest": 15695
+      "close": 2000.0,
+      "changeRate": -0.5,
+      "volume": 5618,
+      "openInterest": 16444
     },
     {
       "contract": "RUF",
       "name": "RUF期貨",
       "stockId": "",
-      "close": 115.0,
-      "changeRate": -2.13,
-      "volume": 61,
-      "openInterest": 326
+      "close": 118.0,
+      "changeRate": 2.61,
+      "volume": 109,
+      "openInterest": 341
     },
     {
       "contract": "RTF",
       "name": "RTF期貨",
       "stockId": "",
-      "close": 6.8003,
-      "changeRate": 0.32,
-      "volume": 50,
-      "openInterest": 60
+      "close": 6.8028,
+      "changeRate": 0.04,
+      "volume": 90,
+      "openInterest": 45
     },
     {
       "contract": "RSF",
       "name": "RSF期貨",
       "stockId": "",
-      "close": 3175.0,
-      "changeRate": -0.78,
-      "volume": 230,
-      "openInterest": 860
+      "close": 3290.0,
+      "changeRate": 4.28,
+      "volume": 397,
+      "openInterest": 835
     },
     {
       "contract": "RRF",
       "name": "RRF期貨",
       "stockId": "",
-      "close": 661.0,
-      "changeRate": -0.9,
-      "volume": 46,
-      "openInterest": 78
+      "close": 666.0,
+      "changeRate": 1.06,
+      "volume": 26,
+      "openInterest": 67
+    },
+    {
+      "contract": "RPF",
+      "name": "RPF期貨",
+      "stockId": "",
+      "close": 672.0,
+      "changeRate": 1.97,
+      "volume": 2,
+      "openInterest": 5
     },
     {
       "contract": "RNF",
       "name": "RNF期貨",
       "stockId": "",
-      "close": 49.7,
-      "changeRate": 2.16,
-      "volume": 1,
-      "openInterest": 126
+      "close": 50.9,
+      "changeRate": 2.41,
+      "volume": 20,
+      "openInterest": 124
     },
     {
       "contract": "RLF",
       "name": "RLF期貨",
       "stockId": "",
-      "close": 37.05,
-      "changeRate": -0.67,
-      "volume": 99,
-      "openInterest": 949
+      "close": 36.5,
+      "changeRate": -1.48,
+      "volume": 113,
+      "openInterest": 939
     },
     {
       "contract": "RKF",
       "name": "RKF期貨",
       "stockId": "",
-      "close": 1270.0,
-      "changeRate": -1.17,
-      "volume": 404,
-      "openInterest": 1136
+      "close": 1260.0,
+      "changeRate": -1.18,
+      "volume": 281,
+      "openInterest": 1171
     },
     {
       "contract": "RJF",
       "name": "RJF期貨",
       "stockId": "",
-      "close": 37.4,
-      "changeRate": 0.0,
+      "close": 36.95,
+      "changeRate": -1.2,
       "volume": 14,
-      "openInterest": 311
+      "openInterest": 306
     },
     {
       "contract": "RIF",
       "name": "RIF期貨",
       "stockId": "",
-      "close": 33.75,
-      "changeRate": -0.91,
-      "volume": 24,
-      "openInterest": 358
+      "close": 34.1,
+      "changeRate": 0.44,
+      "volume": 58,
+      "openInterest": 56
     },
     {
       "contract": "RHF",
       "name": "RHF期貨",
       "stockId": "",
       "close": 6.8002,
-      "changeRate": 0.33,
-      "volume": 24,
+      "changeRate": -0.02,
+      "volume": 25,
       "openInterest": 80
     },
     {
       "contract": "RGF",
       "name": "RGF期貨",
       "stockId": "",
-      "close": 3685.0,
-      "changeRate": -3.53,
-      "volume": 818,
-      "openInterest": 3347
+      "close": 3400.0,
+      "changeRate": -7.73,
+      "volume": 1319,
+      "openInterest": 3529
     },
     {
       "contract": "RFF",
       "name": "小型元大台灣50期貨",
       "stockId": "0050",
-      "close": 2285.0,
-      "changeRate": 1.33,
-      "volume": 118,
-      "openInterest": 1616
+      "close": 2245.0,
+      "changeRate": -1.75,
+      "volume": 158,
+      "openInterest": 1570
     },
     {
       "contract": "REF",
       "name": "REF期貨",
       "stockId": "",
-      "close": 188.5,
-      "changeRate": -5.04,
-      "volume": 2929,
-      "openInterest": 3224
+      "close": 180.0,
+      "changeRate": -4.26,
+      "volume": 1389,
+      "openInterest": 3330
     },
     {
       "contract": "RDF",
       "name": "RDF期貨",
       "stockId": "",
-      "close": 15.25,
-      "changeRate": -0.65,
-      "volume": 23,
-      "openInterest": 68
+      "close": 15.7,
+      "changeRate": 2.95,
+      "volume": 19,
+      "openInterest": 81
     },
     {
       "contract": "RCF",
       "name": "RCF期貨",
       "stockId": "",
-      "close": 49.55,
-      "changeRate": -0.9,
-      "volume": 66,
-      "openInterest": 368
+      "close": 48.5,
+      "changeRate": -2.12,
+      "volume": 97,
+      "openInterest": 373
     },
     {
       "contract": "RBF",
       "name": "RBF期貨",
       "stockId": "",
-      "close": 82.2,
-      "changeRate": 2.24,
-      "volume": 86,
-      "openInterest": 476
+      "close": 81.3,
+      "changeRate": -1.09,
+      "volume": 38,
+      "openInterest": 478
     },
     {
       "contract": "RAF",
       "name": "RAF期貨",
       "stockId": "",
-      "close": 2585.0,
-      "changeRate": 6.16,
-      "volume": 371,
-      "openInterest": 875
+      "close": 2540.0,
+      "changeRate": -1.36,
+      "volume": 290,
+      "openInterest": 897
     },
     {
       "contract": "QZF",
       "name": "力積電期貨",
       "stockId": "6770",
-      "close": 86.3,
-      "changeRate": 9.94,
-      "volume": 49910,
-      "openInterest": 30510
+      "close": 85.0,
+      "changeRate": -1.51,
+      "volume": 50382,
+      "openInterest": 29960
     },
     {
       "contract": "QYF",
       "name": "QYF期貨",
       "stockId": "",
-      "close": 45.95,
-      "changeRate": 1.21,
-      "volume": 4,
-      "openInterest": 765
+      "close": 45.8,
+      "changeRate": -0.33,
+      "volume": 43,
+      "openInterest": 742
     },
     {
       "contract": "QXF",
       "name": "QXF期貨",
       "stockId": "",
-      "close": 79.0,
-      "changeRate": -0.13,
-      "volume": 247,
-      "openInterest": 2631
+      "close": 77.9,
+      "changeRate": -1.39,
+      "volume": 397,
+      "openInterest": 2647
     },
     {
       "contract": "QWF",
       "name": "小型穩懋期貨",
       "stockId": "3105",
-      "close": 78.6,
-      "changeRate": -0.51,
-      "volume": 752,
-      "openInterest": 1471
+      "close": 75.0,
+      "changeRate": -4.58,
+      "volume": 380,
+      "openInterest": 1467
     },
     {
       "contract": "QVF",
       "name": "QVF期貨",
       "stockId": "",
-      "close": 51.5,
-      "changeRate": 0.78,
-      "volume": 56,
-      "openInterest": 327
+      "close": 50.6,
+      "changeRate": -1.75,
+      "volume": 40,
+      "openInterest": 328
     },
     {
       "contract": "QUF",
       "name": "QUF期貨",
       "stockId": "",
-      "close": 104.0,
-      "changeRate": -2.8,
-      "volume": 2516,
-      "openInterest": 5075
+      "close": 97.5,
+      "changeRate": -6.25,
+      "volume": 3815,
+      "openInterest": 4349
     },
     {
       "contract": "QTF",
       "name": "QTF期貨",
       "stockId": "",
-      "close": 145.0,
-      "changeRate": 7.81,
-      "volume": 419,
-      "openInterest": 1311
+      "close": 142.5,
+      "changeRate": -1.72,
+      "volume": 375,
+      "openInterest": 1279
     },
     {
       "contract": "QSF",
       "name": "QSF期貨",
       "stockId": "",
-      "close": 971.0,
-      "changeRate": 6.82,
-      "volume": 19509,
-      "openInterest": 13650
+      "close": 1060.0,
+      "changeRate": 9.5,
+      "volume": 13348,
+      "openInterest": 13330
     },
     {
       "contract": "QRF",
       "name": "QRF期貨",
       "stockId": "",
-      "close": 769.0,
-      "changeRate": -2.16,
-      "volume": 1667,
-      "openInterest": 2757
+      "close": 743.0,
+      "changeRate": -3.51,
+      "volume": 1645,
+      "openInterest": 3171
     },
     {
       "contract": "QQF",
       "name": "QQF期貨",
       "stockId": "",
-      "close": 53.9,
-      "changeRate": 0.0,
-      "volume": 2,
+      "close": 54.5,
+      "changeRate": 1.11,
+      "volume": 1,
       "openInterest": 43
     },
     {
       "contract": "QPF",
       "name": "QPF期貨",
       "stockId": "",
-      "close": 22.5,
-      "changeRate": 2.51,
-      "volume": 10,
-      "openInterest": 274
+      "close": 22.0,
+      "changeRate": -2.22,
+      "volume": 7,
+      "openInterest": 277
     },
     {
       "contract": "QOF",
       "name": "QOF期貨",
       "stockId": "",
-      "close": 74.1,
-      "changeRate": 4.37,
-      "volume": 746,
-      "openInterest": 3323
+      "close": 77.1,
+      "changeRate": 4.05,
+      "volume": 1146,
+      "openInterest": 3446
     },
     {
       "contract": "QNF",
       "name": "QNF期貨",
       "stockId": "",
-      "close": 2530.0,
-      "changeRate": 3.69,
-      "volume": 13028,
-      "openInterest": 20255
+      "close": 2510.0,
+      "changeRate": -0.59,
+      "volume": 12432,
+      "openInterest": 20618
     },
     {
       "contract": "QMF",
       "name": "QMF期貨",
       "stockId": "",
-      "close": 332.0,
-      "changeRate": -1.63,
-      "volume": 571,
-      "openInterest": 1606
+      "close": 337.5,
+      "changeRate": 1.66,
+      "volume": 247,
+      "openInterest": 1622
     },
     {
       "contract": "QLF",
       "name": "QLF期貨",
       "stockId": "",
-      "close": 319.0,
-      "changeRate": 4.25,
-      "volume": 4870,
-      "openInterest": 3638
-    },
-    {
-      "contract": "QKF",
-      "name": "QKF期貨",
-      "stockId": "",
-      "close": 27.65,
-      "changeRate": 1.28,
-      "volume": 4,
-      "openInterest": 148
+      "close": 308.5,
+      "changeRate": -3.29,
+      "volume": 3162,
+      "openInterest": 4440
     },
     {
       "contract": "QJF",
       "name": "QJF期貨",
       "stockId": "",
-      "close": 744.0,
-      "changeRate": -0.93,
-      "volume": 2433,
-      "openInterest": 2307
+      "close": 771.0,
+      "changeRate": 3.77,
+      "volume": 4858,
+      "openInterest": 2877
     },
     {
       "contract": "QIF",
       "name": "QIF期貨",
       "stockId": "",
-      "close": 480.5,
-      "changeRate": -7.42,
-      "volume": 13014,
-      "openInterest": 17018
+      "close": 466.0,
+      "changeRate": -2.71,
+      "volume": 10176,
+      "openInterest": 15788
     },
     {
       "contract": "QHF",
       "name": "QHF期貨",
       "stockId": "",
-      "close": 554.0,
-      "changeRate": 0.91,
-      "volume": 1967,
-      "openInterest": 2843
+      "close": 566.0,
+      "changeRate": 2.17,
+      "volume": 2297,
+      "openInterest": 3176
     },
     {
       "contract": "QGF",
       "name": "QGF期貨",
       "stockId": "",
-      "close": 812.0,
-      "changeRate": -4.81,
-      "volume": 5844,
-      "openInterest": 4565
+      "close": 819.0,
+      "changeRate": 0.74,
+      "volume": 6520,
+      "openInterest": 4599
     },
     {
       "contract": "QFF",
       "name": "小型玉晶光期貨",
       "stockId": "3406",
-      "close": 2430.0,
-      "changeRate": -3.57,
-      "volume": 42785,
-      "openInterest": 64119
+      "close": 2425.0,
+      "changeRate": -0.21,
+      "volume": 22916,
+      "openInterest": 64806
     },
     {
       "contract": "QEF",
       "name": "QEF期貨",
       "stockId": "",
-      "close": 1070.0,
-      "changeRate": 5.94,
-      "volume": 26690,
-      "openInterest": 37589
+      "close": 1140.0,
+      "changeRate": 6.05,
+      "volume": 26693,
+      "openInterest": 38366
     },
     {
       "contract": "QDF",
       "name": "QDF期貨",
       "stockId": "",
-      "close": 373.0,
-      "changeRate": -1.45,
-      "volume": 198,
-      "openInterest": 1169
+      "close": 380.0,
+      "changeRate": 1.88,
+      "volume": 323,
+      "openInterest": 1137
     },
     {
       "contract": "QCF",
       "name": "小型群聯期貨",
       "stockId": "8299",
-      "close": 61.8,
-      "changeRate": 0.0,
-      "volume": 39,
-      "openInterest": 521
+      "close": 62.0,
+      "changeRate": 0.32,
+      "volume": 22,
+      "openInterest": 525
     },
     {
       "contract": "QBF",
       "name": "QBF期貨",
       "stockId": "",
-      "close": 71.5,
-      "changeRate": 1.85,
-      "volume": 953,
-      "openInterest": 1422
+      "close": 68.0,
+      "changeRate": -4.9,
+      "volume": 595,
+      "openInterest": 1518
     },
     {
       "contract": "QAF",
       "name": "QAF期貨",
       "stockId": "",
-      "close": 18555.0,
-      "changeRate": -0.3,
-      "volume": 141,
-      "openInterest": 362
+      "close": 17650.0,
+      "changeRate": -4.88,
+      "volume": 116,
+      "openInterest": 398
     },
     {
       "contract": "PYF",
       "name": "PYF期貨",
       "stockId": "",
-      "close": 764.0,
+      "close": 766.0,
       "changeRate": 0.26,
-      "volume": 199,
-      "openInterest": 1301
+      "volume": 170,
+      "openInterest": 1291
     },
     {
       "contract": "PXF",
       "name": "PXF期貨",
       "stockId": "",
-      "close": 762.0,
-      "changeRate": 0.0,
-      "volume": 8,
-      "openInterest": 86
+      "close": 770.0,
+      "changeRate": 0.79,
+      "volume": 12,
+      "openInterest": 84
     },
     {
       "contract": "PWF",
       "name": "PWF期貨",
       "stockId": "",
-      "close": 4635.0,
-      "changeRate": -0.64,
-      "volume": 1959,
-      "openInterest": 6375
+      "close": 4555.0,
+      "changeRate": -1.73,
+      "volume": 2157,
+      "openInterest": 6322
     },
     {
       "contract": "PVF",
       "name": "PVF期貨",
       "stockId": "",
-      "close": 4635.0,
-      "changeRate": -0.64,
-      "volume": 82,
-      "openInterest": 825
+      "close": 4560.0,
+      "changeRate": -1.62,
+      "volume": 108,
+      "openInterest": 833
     },
     {
       "contract": "PUF",
       "name": "PUF期貨",
       "stockId": "",
-      "close": 4365.0,
-      "changeRate": -4.69,
-      "volume": 19948,
-      "openInterest": 18954
+      "close": 4350.0,
+      "changeRate": -0.34,
+      "volume": 13126,
+      "openInterest": 19333
     },
     {
       "contract": "PTF",
       "name": "PTF期貨",
       "stockId": "",
-      "close": 1070.0,
-      "changeRate": 4.39,
-      "volume": 160,
-      "openInterest": 922
+      "close": 1010.0,
+      "changeRate": -5.61,
+      "volume": 195,
+      "openInterest": 908
     },
     {
       "contract": "PSF",
       "name": "PSF期貨",
       "stockId": "",
-      "close": 86.3,
-      "changeRate": 1.29,
-      "volume": 527,
-      "openInterest": 4471
+      "close": 85.5,
+      "changeRate": -1.27,
+      "volume": 330,
+      "openInterest": 4547
     },
     {
       "contract": "PRF",
       "name": "PRF期貨",
       "stockId": "",
-      "close": 155.5,
-      "changeRate": -2.81,
-      "volume": 114,
-      "openInterest": 449
+      "close": 151.0,
+      "changeRate": -2.89,
+      "volume": 68,
+      "openInterest": 456
     },
     {
       "contract": "PQF",
       "name": "PQF期貨",
       "stockId": "",
-      "close": 643.0,
-      "changeRate": -0.62,
-      "volume": 1419,
-      "openInterest": 3545
+      "close": 639.0,
+      "changeRate": -0.78,
+      "volume": 897,
+      "openInterest": 3475
     },
     {
       "contract": "PPF",
       "name": "PPF期貨",
       "stockId": "",
-      "close": 36.7,
-      "changeRate": 2.23,
-      "volume": 7,
-      "openInterest": 61
+      "close": 37.65,
+      "changeRate": 2.59,
+      "volume": 4,
+      "openInterest": 63
     },
     {
       "contract": "PNF",
       "name": "PNF期貨",
       "stockId": "",
-      "close": 1420.0,
-      "changeRate": 0.35,
-      "volume": 197,
-      "openInterest": 2450
+      "close": 1430.0,
+      "changeRate": 0.7,
+      "volume": 298,
+      "openInterest": 2446
     },
     {
       "contract": "PLF",
       "name": "PLF期貨",
       "stockId": "",
-      "close": 117.5,
-      "changeRate": 3.52,
-      "volume": 5548,
-      "openInterest": 20124
+      "close": 126.0,
+      "changeRate": 7.23,
+      "volume": 14122,
+      "openInterest": 19364
     },
     {
       "contract": "PKF",
       "name": "PKF期貨",
       "stockId": "",
       "close": 308.0,
-      "changeRate": 7.5,
-      "volume": 1128,
-      "openInterest": 3485
+      "changeRate": 0.16,
+      "volume": 928,
+      "openInterest": 3537
     },
     {
       "contract": "PJF",
       "name": "PJF期貨",
       "stockId": "",
-      "close": 5545.0,
-      "changeRate": -3.4,
-      "volume": 51,
-      "openInterest": 331
+      "close": 5595.0,
+      "changeRate": 0.27,
+      "volume": 432,
+      "openInterest": 330
     },
     {
       "contract": "PIF",
       "name": "PIF期貨",
       "stockId": "",
-      "close": 3065.0,
-      "changeRate": -4.22,
-      "volume": 2,
-      "openInterest": 20
+      "close": 3250.0,
+      "changeRate": 3.01,
+      "volume": 10,
+      "openInterest": 26
     },
     {
       "contract": "PHF",
       "name": "PHF期貨",
       "stockId": "",
-      "close": 1420.0,
-      "changeRate": 0.35,
+      "close": 1435.0,
+      "changeRate": 1.06,
       "volume": 8,
-      "openInterest": 212
+      "openInterest": 211
     },
     {
       "contract": "PGF",
       "name": "PGF期貨",
       "stockId": "",
-      "close": 26.25,
-      "changeRate": 0.38,
-      "volume": 8,
-      "openInterest": 86
+      "close": 26.5,
+      "changeRate": 0.95,
+      "volume": 9,
+      "openInterest": 88
     },
     {
       "contract": "PFF",
       "name": "PFF期貨",
       "stockId": "",
-      "close": 53.25,
-      "changeRate": -0.56,
-      "volume": 54,
+      "close": 53.6,
+      "changeRate": 0.75,
+      "volume": 73,
       "openInterest": 258
     },
     {
       "contract": "PEF",
       "name": "PEF期貨",
       "stockId": "",
-      "close": 137.0,
-      "changeRate": 0.37,
-      "volume": 5976,
-      "openInterest": 5677
-    },
-    {
-      "contract": "PCF",
-      "name": "PCF期貨",
-      "stockId": "",
-      "close": 59.8,
-      "changeRate": 3.1,
-      "volume": 5,
-      "openInterest": 13
+      "close": 128.0,
+      "changeRate": -6.57,
+      "volume": 3959,
+      "openInterest": 5742
     },
     {
       "contract": "PBF",
       "name": "PBF期貨",
       "stockId": "",
-      "close": 992.0,
-      "changeRate": -4.15,
-      "volume": 7709,
-      "openInterest": 6292
+      "close": 1045.0,
+      "changeRate": 5.34,
+      "volume": 7566,
+      "openInterest": 7070
     },
     {
       "contract": "PAF",
@@ -1224,556 +1224,565 @@
       "stockId": "",
       "close": 229.0,
       "changeRate": 0.0,
-      "volume": 90,
-      "openInterest": 193
+      "volume": 99,
+      "openInterest": 207
     },
     {
       "contract": "OZF",
       "name": "OZF期貨",
       "stockId": "",
-      "close": 664.0,
-      "changeRate": 0.0,
-      "volume": 4030,
-      "openInterest": 3566
+      "close": 651.0,
+      "changeRate": -1.81,
+      "volume": 3649,
+      "openInterest": 3107
     },
     {
       "contract": "OYF",
       "name": "OYF期貨",
       "stockId": "",
-      "close": 3535.0,
-      "changeRate": -4.33,
-      "volume": 646,
-      "openInterest": 1246
+      "close": 3445.0,
+      "changeRate": -2.55,
+      "volume": 361,
+      "openInterest": 1368
     },
     {
       "contract": "OXF",
       "name": "OXF期貨",
       "stockId": "",
-      "close": 3470.0,
-      "changeRate": -6.09,
-      "volume": 25,
-      "openInterest": 71
+      "close": 3495.0,
+      "changeRate": -1.13,
+      "volume": 24,
+      "openInterest": 68
     },
     {
       "contract": "OWF",
       "name": "OWF期貨",
       "stockId": "",
-      "close": 992.0,
-      "changeRate": -4.15,
-      "volume": 1868,
-      "openInterest": 3322
+      "close": 1040.0,
+      "changeRate": 4.84,
+      "volume": 1574,
+      "openInterest": 3384
     },
     {
       "contract": "OVF",
       "name": "OVF期貨",
       "stockId": "",
-      "close": 1785.0,
-      "changeRate": 3.18,
-      "volume": 888,
-      "openInterest": 2289
+      "close": 1730.0,
+      "changeRate": -3.08,
+      "volume": 1321,
+      "openInterest": 2357
+    },
+    {
+      "contract": "OUF",
+      "name": "OUF期貨",
+      "stockId": "",
+      "close": 50.9,
+      "changeRate": 0.2,
+      "volume": 4,
+      "openInterest": 10
     },
     {
       "contract": "OTF",
       "name": "OTF期貨",
       "stockId": "",
-      "close": 2170.0,
-      "changeRate": -5.24,
-      "volume": 217,
-      "openInterest": 873
+      "close": 2110.0,
+      "changeRate": -2.76,
+      "volume": 143,
+      "openInterest": 848
     },
     {
       "contract": "OSF",
       "name": "OSF期貨",
       "stockId": "",
-      "close": 9.76,
-      "changeRate": 0.93,
-      "volume": 47,
-      "openInterest": 245
+      "close": 9.65,
+      "changeRate": -1.13,
+      "volume": 2,
+      "openInterest": 246
     },
     {
       "contract": "ORF",
       "name": "ORF期貨",
       "stockId": "",
-      "close": 48.5,
-      "changeRate": -1.72,
-      "volume": 35,
-      "openInterest": 433
+      "close": 48.05,
+      "changeRate": -0.93,
+      "volume": 14,
+      "openInterest": 438
     },
     {
       "contract": "OQF",
       "name": "OQF期貨",
       "stockId": "",
-      "close": 374.0,
-      "changeRate": -1.32,
-      "volume": 53,
-      "openInterest": 372
+      "close": 380.0,
+      "changeRate": 1.6,
+      "volume": 36,
+      "openInterest": 370
     },
     {
       "contract": "OPF",
       "name": "OPF期貨",
       "stockId": "",
-      "close": 2440.0,
-      "changeRate": 0.0,
-      "volume": 192,
-      "openInterest": 668
+      "close": 2415.0,
+      "changeRate": -1.63,
+      "volume": 294,
+      "openInterest": 697
     },
     {
       "contract": "OOF",
       "name": "OOF期貨",
       "stockId": "",
-      "close": 20.6,
-      "changeRate": 1.18,
-      "volume": 12,
-      "openInterest": 101
+      "close": 20.84,
+      "changeRate": 1.07,
+      "volume": 9,
+      "openInterest": 9
     },
     {
       "contract": "OMF",
       "name": "OMF期貨",
       "stockId": "",
-      "close": 93.3,
-      "changeRate": -0.21,
-      "volume": 5,
-      "openInterest": 46
+      "close": 97.0,
+      "changeRate": 4.41,
+      "volume": 2,
+      "openInterest": 47
     },
     {
       "contract": "OLF",
       "name": "OLF期貨",
       "stockId": "",
-      "close": 4950.0,
-      "changeRate": -0.7,
-      "volume": 3927,
-      "openInterest": 7033
+      "close": 5250.0,
+      "changeRate": 6.06,
+      "volume": 8159,
+      "openInterest": 7638
     },
     {
       "contract": "OKF",
       "name": "OKF期貨",
       "stockId": "",
-      "close": 18.53,
-      "changeRate": 0.82,
-      "volume": 27,
-      "openInterest": 574
+      "close": 19.09,
+      "changeRate": 3.02,
+      "volume": 42,
+      "openInterest": 564
     },
     {
       "contract": "OJF",
       "name": "OJF期貨",
       "stockId": "",
-      "close": 28.8,
-      "changeRate": -0.17,
-      "volume": 8,
-      "openInterest": 88
-    },
-    {
-      "contract": "OHF",
-      "name": "OHF期貨",
-      "stockId": "",
-      "close": 119.0,
-      "changeRate": -1.24,
-      "volume": 1,
-      "openInterest": 92
+      "close": 29.37,
+      "changeRate": 1.98,
+      "volume": 9,
+      "openInterest": 90
     },
     {
       "contract": "OEF",
       "name": "OEF期貨",
       "stockId": "",
-      "close": 19.2,
-      "changeRate": 3.5,
-      "volume": 8966,
-      "openInterest": 10303
+      "close": 19.15,
+      "changeRate": -0.26,
+      "volume": 3705,
+      "openInterest": 10922
     },
     {
       "contract": "ODF",
       "name": "ODF期貨",
       "stockId": "",
-      "close": 94.0,
-      "changeRate": 0.32,
-      "volume": 30,
-      "openInterest": 192
+      "close": 91.9,
+      "changeRate": -2.23,
+      "volume": 39,
+      "openInterest": 191
+    },
+    {
+      "contract": "OAF",
+      "name": "OAF期貨",
+      "stockId": "",
+      "close": 42.29,
+      "changeRate": 2.5,
+      "volume": 7,
+      "openInterest": 729
     },
     {
       "contract": "NYF",
       "name": "NYF期貨",
       "stockId": "",
-      "close": 107.8,
-      "changeRate": -2.71,
-      "volume": 8018,
-      "openInterest": 20364
+      "close": 108.0,
+      "changeRate": 0.23,
+      "volume": 5379,
+      "openInterest": 18851
     },
     {
       "contract": "NWF",
       "name": "NWF期貨",
       "stockId": "",
-      "close": 2525.0,
-      "changeRate": 3.48,
-      "volume": 1799,
-      "openInterest": 3785
+      "close": 2510.0,
+      "changeRate": -0.59,
+      "volume": 1527,
+      "openInterest": 3956
     },
     {
       "contract": "NVF",
       "name": "NVF期貨",
       "stockId": "",
-      "close": 198.5,
-      "changeRate": 1.28,
-      "volume": 226,
-      "openInterest": 1012
+      "close": 197.5,
+      "changeRate": -0.5,
+      "volume": 206,
+      "openInterest": 990
     },
     {
       "contract": "NUF",
       "name": "NUF期貨",
       "stockId": "",
-      "close": 29.8,
-      "changeRate": -1.49,
-      "volume": 6,
-      "openInterest": 27
+      "close": 30.75,
+      "changeRate": 3.19,
+      "volume": 11,
+      "openInterest": 30
     },
     {
       "contract": "NSF",
       "name": "NSF期貨",
       "stockId": "",
-      "close": 251.5,
-      "changeRate": -1.76,
-      "volume": 7328,
-      "openInterest": 9909
+      "close": 241.0,
+      "changeRate": -4.17,
+      "volume": 4710,
+      "openInterest": 9876
     },
     {
       "contract": "NQF",
       "name": "NQF期貨",
       "stockId": "",
-      "close": 416.0,
-      "changeRate": -0.83,
+      "close": 423.0,
+      "changeRate": 1.68,
       "volume": 3,
-      "openInterest": 35
+      "openInterest": 36
     },
     {
       "contract": "NOF",
       "name": "NOF期貨",
       "stockId": "",
-      "close": 171.5,
-      "changeRate": -0.87,
-      "volume": 1293,
-      "openInterest": 2346
+      "close": 177.0,
+      "changeRate": 3.21,
+      "volume": 1269,
+      "openInterest": 2405
     },
     {
       "contract": "NMF",
       "name": "NMF期貨",
       "stockId": "",
-      "close": 78.7,
-      "changeRate": 2.08,
-      "volume": 606,
-      "openInterest": 719
+      "close": 74.8,
+      "changeRate": -4.96,
+      "volume": 334,
+      "openInterest": 756
     },
     {
       "contract": "NLF",
       "name": "NLF期貨",
       "stockId": "",
-      "close": 205.0,
-      "changeRate": 9.33,
-      "volume": 5624,
-      "openInterest": 9337
+      "close": 225.5,
+      "changeRate": 10.0,
+      "volume": 7284,
+      "openInterest": 9552
     },
     {
       "contract": "NJF",
       "name": "NJF期貨",
       "stockId": "",
-      "close": 35.75,
-      "changeRate": -1.65,
-      "volume": 207,
-      "openInterest": 711
+      "close": 34.9,
+      "changeRate": -2.38,
+      "volume": 148,
+      "openInterest": 777
     },
     {
       "contract": "NIF",
       "name": "NIF期貨",
       "stockId": "",
-      "close": 38.3,
-      "changeRate": 2.27,
-      "volume": 50,
-      "openInterest": 301
+      "close": 38.0,
+      "changeRate": -0.78,
+      "volume": 16,
+      "openInterest": 306
     },
     {
       "contract": "NGF",
       "name": "NGF期貨",
       "stockId": "",
-      "close": 153.5,
-      "changeRate": 2.33,
-      "volume": 42,
-      "openInterest": 378
+      "close": 151.0,
+      "changeRate": -1.63,
+      "volume": 68,
+      "openInterest": 385
     },
     {
       "contract": "NEF",
       "name": "NEF期貨",
       "stockId": "",
-      "close": 238.0,
-      "changeRate": 2.37,
-      "volume": 143,
-      "openInterest": 773
+      "close": 231.5,
+      "changeRate": -2.73,
+      "volume": 88,
+      "openInterest": 770
     },
     {
       "contract": "NDF",
       "name": "NDF期貨",
       "stockId": "",
-      "close": 409.5,
-      "changeRate": 0.49,
-      "volume": 740,
-      "openInterest": 2210
+      "close": 408.0,
+      "changeRate": -0.37,
+      "volume": 575,
+      "openInterest": 2268
     },
     {
       "contract": "NCF",
       "name": "NCF期貨",
       "stockId": "",
-      "close": 422.0,
-      "changeRate": -2.2,
-      "volume": 27,
-      "openInterest": 181
+      "close": 408.0,
+      "changeRate": -2.51,
+      "volume": 24,
+      "openInterest": 177
     },
     {
       "contract": "NAF",
       "name": "NAF期貨",
       "stockId": "",
-      "close": 479.0,
-      "changeRate": -7.71,
-      "volume": 6753,
-      "openInterest": 8811
+      "close": 466.0,
+      "changeRate": -2.71,
+      "volume": 5605,
+      "openInterest": 6965
     },
     {
       "contract": "MYF",
       "name": "MYF期貨",
       "stockId": "",
-      "close": 92.9,
-      "changeRate": -0.64,
-      "volume": 2,
-      "openInterest": 3
+      "close": 97.0,
+      "changeRate": 4.41,
+      "volume": 16,
+      "openInterest": 9
     },
     {
       "contract": "MVF",
       "name": "MVF期貨",
       "stockId": "",
-      "close": 44.25,
-      "changeRate": 0.45,
-      "volume": 3,
-      "openInterest": 105
+      "close": 45.0,
+      "changeRate": 1.69,
+      "volume": 7,
+      "openInterest": 112
     },
     {
       "contract": "MTX",
       "name": "MTX期貨",
       "stockId": "",
-      "close": 46382.0,
-      "changeRate": -2.22,
-      "volume": 183194,
-      "openInterest": 35011
+      "close": 46548.0,
+      "changeRate": 0.3,
+      "volume": 148783,
+      "openInterest": 34741
     },
     {
       "contract": "MQF",
       "name": "MQF期貨",
       "stockId": "",
-      "close": 250.0,
-      "changeRate": 4.82,
-      "volume": 699,
-      "openInterest": 1766
+      "close": 239.0,
+      "changeRate": -3.63,
+      "volume": 813,
+      "openInterest": 1669
     },
     {
       "contract": "MKF",
       "name": "MKF期貨",
       "stockId": "",
-      "close": 92.0,
-      "changeRate": 0.11,
-      "volume": 20,
-      "openInterest": 474
+      "close": 92.6,
+      "changeRate": 0.65,
+      "volume": 23,
+      "openInterest": 470
     },
     {
       "contract": "MJF",
       "name": "MJF期貨",
       "stockId": "",
-      "close": 2185.0,
-      "changeRate": -3.1,
-      "volume": 27,
-      "openInterest": 196
+      "close": 2165.0,
+      "changeRate": -0.92,
+      "volume": 12,
+      "openInterest": 191
     },
     {
       "contract": "MBF",
       "name": "MBF期貨",
       "stockId": "",
-      "close": 56.4,
-      "changeRate": 1.26,
-      "volume": 292,
-      "openInterest": 856
+      "close": 54.4,
+      "changeRate": -3.55,
+      "volume": 184,
+      "openInterest": 883
     },
     {
       "contract": "M1F",
       "name": "M1F期貨",
       "stockId": "",
-      "close": 37479.0,
-      "changeRate": 0.82,
-      "volume": 228,
-      "openInterest": 473
+      "close": 37797.0,
+      "changeRate": 0.65,
+      "volume": 302,
+      "openInterest": 70
     },
     {
       "contract": "LYF",
       "name": "LYF期貨",
       "stockId": "",
-      "close": 970.0,
-      "changeRate": 6.71,
-      "volume": 3574,
-      "openInterest": 2604
+      "close": 1060.0,
+      "changeRate": 9.5,
+      "volume": 2729,
+      "openInterest": 2863
     },
     {
       "contract": "LXF",
       "name": "LXF期貨",
       "stockId": "",
-      "close": 1085.0,
-      "changeRate": 7.43,
-      "volume": 10371,
-      "openInterest": 20432
+      "close": 1140.0,
+      "changeRate": 6.05,
+      "volume": 7215,
+      "openInterest": 21071
     },
     {
       "contract": "LWF",
       "name": "LWF期貨",
       "stockId": "",
-      "close": 316.0,
-      "changeRate": 0.16,
-      "volume": 1,
-      "openInterest": 48
+      "close": 323.0,
+      "changeRate": 1.41,
+      "volume": 8,
+      "openInterest": 45
     },
     {
       "contract": "LVF",
       "name": "LVF期貨",
       "stockId": "",
-      "close": 114.5,
-      "changeRate": -1.72,
-      "volume": 45,
-      "openInterest": 458
+      "close": 116.5,
+      "changeRate": 1.75,
+      "volume": 70,
+      "openInterest": 442
     },
     {
       "contract": "LUF",
       "name": "LUF期貨",
       "stockId": "",
-      "close": 593.0,
-      "changeRate": 0.51,
-      "volume": 2242,
-      "openInterest": 5198
+      "close": 610.0,
+      "changeRate": 2.87,
+      "volume": 3071,
+      "openInterest": 5463
     },
     {
       "contract": "LTF",
       "name": "LTF期貨",
       "stockId": "",
-      "close": 101.0,
-      "changeRate": -5.61,
-      "volume": 411,
-      "openInterest": 437
+      "close": 110.0,
+      "changeRate": 7.84,
+      "volume": 595,
+      "openInterest": 314
     },
     {
       "contract": "LRF",
       "name": "LRF期貨",
       "stockId": "",
-      "close": 29.85,
-      "changeRate": -2.13,
-      "volume": 441,
-      "openInterest": 1545
+      "close": 30.4,
+      "changeRate": 1.84,
+      "volume": 454,
+      "openInterest": 1752
     },
     {
       "contract": "LQF",
       "name": "LQF期貨",
       "stockId": "",
       "close": 66.9,
-      "changeRate": 2.14,
-      "volume": 1605,
-      "openInterest": 3366
+      "changeRate": 0.0,
+      "volume": 728,
+      "openInterest": 3430
     },
     {
       "contract": "LOF",
       "name": "LOF期貨",
       "stockId": "",
-      "close": 24.6,
-      "changeRate": -0.61,
-      "volume": 117,
-      "openInterest": 164
+      "close": 25.2,
+      "changeRate": 2.44,
+      "volume": 113,
+      "openInterest": 223
     },
     {
       "contract": "LMF",
       "name": "LMF期貨",
       "stockId": "",
-      "close": 72.1,
-      "changeRate": 0.14,
-      "volume": 9,
-      "openInterest": 393
+      "close": 73.0,
+      "changeRate": 1.25,
+      "volume": 47,
+      "openInterest": 377
     },
     {
       "contract": "LIF",
       "name": "LIF期貨",
       "stockId": "",
-      "close": 79.1,
-      "changeRate": -4.47,
-      "volume": 1020,
-      "openInterest": 1463
+      "close": 76.2,
+      "changeRate": -3.67,
+      "volume": 962,
+      "openInterest": 1127
     },
     {
       "contract": "LEF",
       "name": "LEF期貨",
       "stockId": "",
-      "close": 744.0,
-      "changeRate": -0.93,
-      "volume": 177,
-      "openInterest": 547
+      "close": 765.0,
+      "changeRate": 2.96,
+      "volume": 409,
+      "openInterest": 612
     },
     {
       "contract": "LCF",
       "name": "LCF期貨",
       "stockId": "",
-      "close": 120.5,
-      "changeRate": 0.84,
-      "volume": 125,
-      "openInterest": 2103
+      "close": 120.0,
+      "changeRate": -0.41,
+      "volume": 284,
+      "openInterest": 1948
     },
     {
       "contract": "LBF",
       "name": "LBF期貨",
       "stockId": "",
       "close": 531.0,
-      "changeRate": 0.19,
-      "volume": 56,
-      "openInterest": 405
+      "changeRate": 0.0,
+      "volume": 34,
+      "openInterest": 409
     },
     {
       "contract": "KWF",
       "name": "KWF期貨",
       "stockId": "",
-      "close": 51.7,
-      "changeRate": -0.19,
-      "volume": 98,
-      "openInterest": 888
+      "close": 50.7,
+      "changeRate": -1.93,
+      "volume": 79,
+      "openInterest": 900
     },
     {
       "contract": "KUF",
       "name": "KUF期貨",
       "stockId": "",
-      "close": 69.3,
-      "changeRate": -0.86,
-      "volume": 4065,
-      "openInterest": 14751
+      "close": 69.9,
+      "changeRate": 0.87,
+      "volume": 4623,
+      "openInterest": 14665
     },
     {
       "contract": "KSF",
       "name": "KSF期貨",
       "stockId": "",
-      "close": 221.0,
-      "changeRate": 1.61,
-      "volume": 22,
-      "openInterest": 93
+      "close": 224.5,
+      "changeRate": 1.58,
+      "volume": 26,
+      "openInterest": 90
     },
     {
       "contract": "KPF",
       "name": "KPF期貨",
       "stockId": "",
-      "close": 26.95,
-      "changeRate": -1.1,
-      "volume": 70,
-      "openInterest": 555
+      "close": 27.3,
+      "changeRate": 1.3,
+      "volume": 18,
+      "openInterest": 554
     },
     {
       "contract": "KOF",
       "name": "KOF期貨",
       "stockId": "",
-      "close": 130.0,
-      "changeRate": -1.89,
-      "volume": 3,
+      "close": 129.0,
+      "changeRate": -0.77,
+      "volume": 30,
       "openInterest": 111
     },
     {
@@ -1782,674 +1791,674 @@
       "stockId": "",
       "close": 26.25,
       "changeRate": 0.0,
-      "volume": 84,
-      "openInterest": 605
+      "volume": 110,
+      "openInterest": 644
     },
     {
       "contract": "KKF",
       "name": "KKF期貨",
       "stockId": "",
-      "close": 43.45,
-      "changeRate": 1.05,
-      "volume": 16,
-      "openInterest": 222
+      "close": 44.0,
+      "changeRate": 1.27,
+      "volume": 18,
+      "openInterest": 219
     },
     {
       "contract": "KIF",
       "name": "KIF期貨",
       "stockId": "",
-      "close": 149.5,
-      "changeRate": 2.4,
-      "volume": 227,
-      "openInterest": 1406
+      "close": 144.5,
+      "changeRate": -3.34,
+      "volume": 205,
+      "openInterest": 1381
     },
     {
       "contract": "KGF",
       "name": "KGF期貨",
       "stockId": "",
-      "close": 253.5,
-      "changeRate": 0.2,
-      "volume": 398,
-      "openInterest": 1182
+      "close": 257.5,
+      "changeRate": 1.38,
+      "volume": 223,
+      "openInterest": 1147
     },
     {
       "contract": "KFF",
       "name": "KFF期貨",
       "stockId": "",
-      "close": 63.0,
-      "changeRate": 2.61,
-      "volume": 3524,
-      "openInterest": 5264
+      "close": 58.5,
+      "changeRate": -7.0,
+      "volume": 2161,
+      "openInterest": 5492
     },
     {
       "contract": "KEF",
       "name": "KEF期貨",
       "stockId": "",
-      "close": 203.5,
-      "changeRate": -1.21,
-      "volume": 387,
-      "openInterest": 1615
+      "close": 210.5,
+      "changeRate": 3.44,
+      "volume": 446,
+      "openInterest": 1653
     },
     {
       "contract": "KDF",
       "name": "KDF期貨",
       "stockId": "",
-      "close": 256.0,
-      "changeRate": 4.7,
-      "volume": 841,
-      "openInterest": 1280
+      "close": 276.0,
+      "changeRate": 7.81,
+      "volume": 2631,
+      "openInterest": 1515
     },
     {
       "contract": "KCF",
       "name": "KCF期貨",
       "stockId": "",
-      "close": 340.0,
-      "changeRate": -1.16,
-      "volume": 3852,
-      "openInterest": 7343
+      "close": 329.5,
+      "changeRate": -3.09,
+      "volume": 6167,
+      "openInterest": 6759
     },
     {
       "contract": "KBF",
       "name": "KBF期貨",
       "stockId": "",
-      "close": 311.5,
-      "changeRate": 9.88,
-      "volume": 1140,
-      "openInterest": 2615
+      "close": 342.5,
+      "changeRate": 9.95,
+      "volume": 1222,
+      "openInterest": 2726
     },
     {
       "contract": "KAF",
       "name": "KAF期貨",
       "stockId": "",
-      "close": 90.8,
-      "changeRate": 0.67,
-      "volume": 167,
-      "openInterest": 661
+      "close": 91.6,
+      "changeRate": 0.88,
+      "volume": 238,
+      "openInterest": 743
     },
     {
       "contract": "JZF",
       "name": "JZF期貨",
       "stockId": "",
-      "close": 23.5,
-      "changeRate": -4.67,
-      "volume": 528,
-      "openInterest": 1391
+      "close": 22.5,
+      "changeRate": -4.26,
+      "volume": 273,
+      "openInterest": 1357
     },
     {
       "contract": "JXF",
       "name": "JXF期貨",
       "stockId": "",
-      "close": 38.6,
-      "changeRate": -3.98,
-      "volume": 59,
-      "openInterest": 331
+      "close": 39.0,
+      "changeRate": 1.04,
+      "volume": 18,
+      "openInterest": 335
     },
     {
       "contract": "JWF",
       "name": "JWF期貨",
       "stockId": "",
       "close": 78.9,
-      "changeRate": -0.75,
+      "changeRate": 0.0,
       "volume": 8,
-      "openInterest": 119
+      "openInterest": 111
     },
     {
       "contract": "JSF",
       "name": "JSF期貨",
       "stockId": "",
-      "close": 84.7,
-      "changeRate": 5.22,
-      "volume": 714,
-      "openInterest": 745
+      "close": 87.8,
+      "changeRate": 3.66,
+      "volume": 1475,
+      "openInterest": 741
     },
     {
       "contract": "JPF",
       "name": "JPF期貨",
       "stockId": "",
-      "close": 107.0,
-      "changeRate": -0.47,
-      "volume": 60,
-      "openInterest": 1889
+      "close": 107.5,
+      "changeRate": 0.47,
+      "volume": 173,
+      "openInterest": 1884
     },
     {
       "contract": "JNF",
       "name": "JNF期貨",
       "stockId": "",
-      "close": 85.3,
-      "changeRate": 4.15,
-      "volume": 1645,
-      "openInterest": 1508
+      "close": 82.0,
+      "changeRate": -3.87,
+      "volume": 838,
+      "openInterest": 1516
     },
     {
       "contract": "JMF",
       "name": "JMF期貨",
       "stockId": "",
-      "close": 3670.0,
-      "changeRate": -3.93,
-      "volume": 8,
-      "openInterest": 170
+      "close": 3420.0,
+      "changeRate": -7.19,
+      "volume": 35,
+      "openInterest": 165
     },
     {
       "contract": "JFF",
       "name": "JFF期貨",
       "stockId": "",
-      "close": 2260.0,
-      "changeRate": 0.22,
-      "volume": 13,
-      "openInterest": 63
+      "close": 2225.0,
+      "changeRate": -2.63,
+      "volume": 40,
+      "openInterest": 57
     },
     {
       "contract": "JBF",
       "name": "JBF期貨",
       "stockId": "",
-      "close": 4940.0,
-      "changeRate": 4.11,
-      "volume": 181,
-      "openInterest": 1017
+      "close": 4870.0,
+      "changeRate": -1.42,
+      "volume": 446,
+      "openInterest": 976
     },
     {
       "contract": "IZF",
       "name": "IZF期貨",
       "stockId": "",
-      "close": 34.9,
-      "changeRate": 0.87,
-      "volume": 77,
-      "openInterest": 364
+      "close": 34.0,
+      "changeRate": -2.58,
+      "volume": 81,
+      "openInterest": 382
     },
     {
       "contract": "IYF",
       "name": "IYF期貨",
       "stockId": "",
-      "close": 203.0,
-      "changeRate": -0.73,
-      "volume": 177,
-      "openInterest": 1932
+      "close": 204.0,
+      "changeRate": 0.49,
+      "volume": 599,
+      "openInterest": 2004
     },
     {
       "contract": "IXF",
       "name": "IXF期貨",
       "stockId": "",
-      "close": 747.0,
-      "changeRate": 1.22,
-      "volume": 3395,
-      "openInterest": 5838
+      "close": 821.0,
+      "changeRate": 9.91,
+      "volume": 5091,
+      "openInterest": 5396
     },
     {
       "contract": "ITF",
       "name": "ITF期貨",
       "stockId": "",
-      "close": 193.5,
-      "changeRate": 3.75,
-      "volume": 2757,
-      "openInterest": 5142
+      "close": 186.0,
+      "changeRate": -3.88,
+      "volume": 1447,
+      "openInterest": 4860
     },
     {
       "contract": "IRF",
       "name": "IRF期貨",
       "stockId": "",
-      "close": 949.0,
-      "changeRate": -3.95,
-      "volume": 2364,
-      "openInterest": 4708
+      "close": 1040.0,
+      "changeRate": 9.59,
+      "volume": 3726,
+      "openInterest": 4995
     },
     {
       "contract": "IQF",
       "name": "IQF期貨",
       "stockId": "",
-      "close": 220.5,
-      "changeRate": -1.12,
-      "volume": 233,
-      "openInterest": 2428
+      "close": 219.0,
+      "changeRate": -0.68,
+      "volume": 590,
+      "openInterest": 2279
     },
     {
       "contract": "IPF",
       "name": "IPF期貨",
       "stockId": "",
-      "close": 235.0,
-      "changeRate": 0.0,
-      "volume": 2278,
-      "openInterest": 2340
+      "close": 226.5,
+      "changeRate": -3.62,
+      "volume": 2380,
+      "openInterest": 2294
     },
     {
       "contract": "IOF",
       "name": "IOF期貨",
       "stockId": "",
-      "close": 556.0,
-      "changeRate": 1.28,
-      "volume": 509,
-      "openInterest": 610
+      "close": 564.0,
+      "changeRate": 1.81,
+      "volume": 412,
+      "openInterest": 662
     },
     {
       "contract": "IMF",
       "name": "IMF期貨",
       "stockId": "",
-      "close": 152.5,
-      "changeRate": 0.0,
-      "volume": 995,
-      "openInterest": 2292
+      "close": 149.0,
+      "changeRate": -2.3,
+      "volume": 613,
+      "openInterest": 2391
     },
     {
       "contract": "IJF",
       "name": "IJF期貨",
       "stockId": "",
-      "close": 4940.0,
-      "changeRate": -0.9,
-      "volume": 70,
-      "openInterest": 514
+      "close": 5250.0,
+      "changeRate": 6.06,
+      "volume": 137,
+      "openInterest": 542
     },
     {
       "contract": "IIF",
       "name": "IIF期貨",
       "stockId": "",
-      "close": 250.5,
-      "changeRate": 2.24,
-      "volume": 1801,
-      "openInterest": 2740
+      "close": 246.0,
+      "changeRate": -1.8,
+      "volume": 1531,
+      "openInterest": 2665
     },
     {
       "contract": "IHF",
       "name": "IHF期貨",
       "stockId": "",
-      "close": 11.1,
-      "changeRate": 0.45,
-      "volume": 7,
-      "openInterest": 76
+      "close": 11.05,
+      "changeRate": -0.45,
+      "volume": 22,
+      "openInterest": 90
     },
     {
       "contract": "IAF",
       "name": "IAF期貨",
       "stockId": "",
-      "close": 17.8,
-      "changeRate": 0.0,
-      "volume": 36,
-      "openInterest": 241
+      "close": 18.25,
+      "changeRate": 2.53,
+      "volume": 25,
+      "openInterest": 257
     },
     {
       "contract": "HSF",
       "name": "HSF期貨",
       "stockId": "",
-      "close": 44.45,
-      "changeRate": 1.83,
-      "volume": 4643,
-      "openInterest": 5305
+      "close": 44.85,
+      "changeRate": 0.9,
+      "volume": 4581,
+      "openInterest": 5767
     },
     {
       "contract": "HQF",
       "name": "HQF期貨",
       "stockId": "",
-      "close": 31.8,
-      "changeRate": -0.63,
-      "volume": 134,
-      "openInterest": 669
+      "close": 31.15,
+      "changeRate": -2.04,
+      "volume": 220,
+      "openInterest": 697
     },
     {
       "contract": "HOF",
       "name": "HOF期貨",
       "stockId": "",
-      "close": 102.0,
-      "changeRate": -0.49,
-      "volume": 12,
-      "openInterest": 247
+      "close": 103.0,
+      "changeRate": 0.98,
+      "volume": 11,
+      "openInterest": 243
     },
     {
       "contract": "HLF",
       "name": "HLF期貨",
       "stockId": "",
-      "close": 43.15,
-      "changeRate": 0.7,
-      "volume": 66,
-      "openInterest": 753
+      "close": 43.4,
+      "changeRate": 0.58,
+      "volume": 49,
+      "openInterest": 745
     },
     {
       "contract": "HIF",
       "name": "HIF期貨",
       "stockId": "",
-      "close": 33.85,
-      "changeRate": -1.88,
-      "volume": 7,
-      "openInterest": 296
+      "close": 34.6,
+      "changeRate": 1.32,
+      "volume": 15,
+      "openInterest": 294
     },
     {
       "contract": "HHF",
       "name": "HHF期貨",
       "stockId": "",
-      "close": 13.4,
-      "changeRate": 0.0,
-      "volume": 20,
-      "openInterest": 389
+      "close": 13.25,
+      "changeRate": -1.12,
+      "volume": 41,
+      "openInterest": 408
     },
     {
       "contract": "HCF",
       "name": "HCF期貨",
       "stockId": "",
-      "close": 46.2,
-      "changeRate": -0.32,
-      "volume": 790,
-      "openInterest": 1484
+      "close": 45.7,
+      "changeRate": -1.08,
+      "volume": 841,
+      "openInterest": 1454
     },
     {
       "contract": "HBF",
       "name": "HBF期貨",
       "stockId": "",
-      "close": 594.0,
-      "changeRate": 3.66,
-      "volume": 3756,
-      "openInterest": 5604
+      "close": 601.0,
+      "changeRate": 0.84,
+      "volume": 2862,
+      "openInterest": 5636
     },
     {
       "contract": "HAF",
       "name": "HAF期貨",
       "stockId": "",
-      "close": 47.45,
-      "changeRate": 0.85,
-      "volume": 1426,
-      "openInterest": 3403
+      "close": 46.7,
+      "changeRate": 0.97,
+      "volume": 814,
+      "openInterest": 3373
     },
     {
       "contract": "GZF",
       "name": "GZF期貨",
       "stockId": "",
-      "close": 58.7,
-      "changeRate": 2.98,
-      "volume": 457,
-      "openInterest": 1396
+      "close": 56.8,
+      "changeRate": -3.24,
+      "volume": 176,
+      "openInterest": 1421
     },
     {
       "contract": "GYF",
       "name": "GYF期貨",
       "stockId": "",
-      "close": 204.5,
-      "changeRate": 4.34,
-      "volume": 7655,
-      "openInterest": 4726
+      "close": 194.5,
+      "changeRate": -4.42,
+      "volume": 6770,
+      "openInterest": 5198
     },
     {
       "contract": "GXF",
       "name": "GXF期貨",
       "stockId": "",
-      "close": 214.5,
-      "changeRate": 0.47,
-      "volume": 501,
-      "openInterest": 2722
+      "close": 207.5,
+      "changeRate": -3.26,
+      "volume": 731,
+      "openInterest": 2815
     },
     {
       "contract": "GWF",
       "name": "GWF期貨",
       "stockId": "",
-      "close": 166.0,
-      "changeRate": 0.0,
-      "volume": 149,
-      "openInterest": 467
+      "close": 182.0,
+      "changeRate": 9.64,
+      "volume": 653,
+      "openInterest": 551
     },
     {
       "contract": "GVF",
       "name": "GVF期貨",
       "stockId": "",
-      "close": 29.9,
-      "changeRate": -2.29,
-      "volume": 216,
-      "openInterest": 286
+      "close": 30.05,
+      "changeRate": 0.5,
+      "volume": 97,
+      "openInterest": 313
     },
     {
       "contract": "GUF",
       "name": "GUF期貨",
       "stockId": "",
-      "close": 399.5,
-      "changeRate": 0.0,
-      "volume": 1051,
-      "openInterest": 3220
-    },
-    {
-      "contract": "GTF",
-      "name": "GTF期貨",
-      "stockId": "",
-      "close": 439.0,
-      "changeRate": -0.86,
-      "volume": 2,
-      "openInterest": 0
+      "close": 392.0,
+      "changeRate": -1.88,
+      "volume": 566,
+      "openInterest": 3197
     },
     {
       "contract": "GRF",
       "name": "GRF期貨",
       "stockId": "",
-      "close": 338.0,
-      "changeRate": 2.11,
-      "volume": 5114,
-      "openInterest": 4779
+      "close": 338.5,
+      "changeRate": 0.15,
+      "volume": 3376,
+      "openInterest": 4867
     },
     {
       "contract": "GOF",
       "name": "GOF期貨",
       "stockId": "",
-      "close": 1260.0,
-      "changeRate": 0.4,
-      "volume": 53,
-      "openInterest": 438
+      "close": 1355.0,
+      "changeRate": 7.11,
+      "volume": 156,
+      "openInterest": 430
     },
     {
       "contract": "GNF",
       "name": "GNF期貨",
       "stockId": "",
-      "close": 35.2,
-      "changeRate": 6.99,
-      "volume": 1320,
-      "openInterest": 931
+      "close": 34.95,
+      "changeRate": -0.71,
+      "volume": 1203,
+      "openInterest": 1034
+    },
+    {
+      "contract": "GMF",
+      "name": "GMF期貨",
+      "stockId": "",
+      "close": 70.3,
+      "changeRate": 0.43,
+      "volume": 6,
+      "openInterest": 100
     },
     {
       "contract": "GLF",
       "name": "GLF期貨",
       "stockId": "",
-      "close": 39.5,
-      "changeRate": 1.02,
-      "volume": 7,
-      "openInterest": 317
+      "close": 39.4,
+      "changeRate": -0.25,
+      "volume": 2,
+      "openInterest": 319
     },
     {
       "contract": "GKF",
       "name": "GKF期貨",
       "stockId": "",
-      "close": 109.0,
-      "changeRate": -1.36,
-      "volume": 46,
-      "openInterest": 356
+      "close": 106.0,
+      "changeRate": -2.75,
+      "volume": 19,
+      "openInterest": 364
     },
     {
       "contract": "GJF",
       "name": "GJF期貨",
       "stockId": "",
-      "close": 813.0,
-      "changeRate": -4.69,
-      "volume": 365,
-      "openInterest": 494
+      "close": 810.0,
+      "changeRate": -0.37,
+      "volume": 427,
+      "openInterest": 459
     },
     {
       "contract": "GIF",
       "name": "GIF期貨",
       "stockId": "",
-      "close": 133.0,
-      "changeRate": 1.92,
-      "volume": 661,
-      "openInterest": 1944
+      "close": 131.5,
+      "changeRate": -1.13,
+      "volume": 235,
+      "openInterest": 2003
     },
     {
       "contract": "GHF",
       "name": "GHF期貨",
       "stockId": "",
-      "close": 338.0,
-      "changeRate": 2.27,
-      "volume": 523,
-      "openInterest": 1633
+      "close": 336.0,
+      "changeRate": -1.03,
+      "volume": 269,
+      "openInterest": 1691
     },
     {
       "contract": "GDF",
       "name": "GDF期貨",
       "stockId": "",
-      "close": 4090.8,
-      "changeRate": -0.18,
-      "volume": 222,
-      "openInterest": 12
+      "close": 3987.5,
+      "changeRate": -2.53,
+      "volume": 194,
+      "openInterest": 14
     },
     {
       "contract": "GCF",
       "name": "GCF期貨",
       "stockId": "",
-      "close": 58.7,
-      "changeRate": 2.44,
-      "volume": 222,
-      "openInterest": 611
+      "close": 57.6,
+      "changeRate": -1.87,
+      "volume": 57,
+      "openInterest": 623
     },
     {
       "contract": "GAF",
       "name": "GAF期貨",
       "stockId": "",
-      "close": 92.5,
-      "changeRate": 1.31,
-      "volume": 13,
-      "openInterest": 342
+      "close": 96.3,
+      "changeRate": 4.11,
+      "volume": 26,
+      "openInterest": 353
     },
     {
       "contract": "G2F",
       "name": "G2F期貨",
       "stockId": "",
-      "close": 20575.0,
-      "changeRate": -0.25,
-      "volume": 23,
-      "openInterest": 31
+      "close": 20435.0,
+      "changeRate": -0.68,
+      "volume": 37,
+      "openInterest": 32
     },
     {
       "contract": "FZF",
       "name": "華邦電期貨",
       "stockId": "2344",
-      "close": 208.5,
-      "changeRate": -0.95,
-      "volume": 22397,
-      "openInterest": 32456
+      "close": 222.0,
+      "changeRate": 6.47,
+      "volume": 27405,
+      "openInterest": 33802
     },
     {
       "contract": "FYF",
       "name": "FYF期貨",
       "stockId": "",
-      "close": 42.1,
-      "changeRate": -3.66,
-      "volume": 728,
-      "openInterest": 802
+      "close": 39.0,
+      "changeRate": -7.36,
+      "volume": 619,
+      "openInterest": 784
     },
     {
       "contract": "FWF",
       "name": "FWF期貨",
       "stockId": "",
-      "close": 18.75,
-      "changeRate": 1.08,
-      "volume": 116,
-      "openInterest": 617
+      "close": 18.4,
+      "changeRate": -1.87,
+      "volume": 77,
+      "openInterest": 600
     },
     {
       "contract": "FVF",
       "name": "FVF期貨",
       "stockId": "",
-      "close": 21.85,
-      "changeRate": -2.46,
-      "volume": 27,
-      "openInterest": 351
+      "close": 21.8,
+      "changeRate": -0.23,
+      "volume": 16,
+      "openInterest": 354
     },
     {
       "contract": "FTF",
       "name": "FTF期貨",
       "stockId": "",
-      "close": 240.5,
-      "changeRate": -0.21,
-      "volume": 2629,
-      "openInterest": 1716
+      "close": 232.0,
+      "changeRate": -3.53,
+      "volume": 2741,
+      "openInterest": 1934
     },
     {
       "contract": "FT1",
       "name": "FT1期貨",
       "stockId": "",
-      "close": 241.0,
-      "changeRate": -0.41,
-      "volume": 425,
-      "openInterest": 5085
+      "close": 232.5,
+      "changeRate": -3.53,
+      "volume": 270,
+      "openInterest": 5021
     },
     {
       "contract": "FSF",
       "name": "FSF期貨",
       "stockId": "",
-      "close": 38.3,
-      "changeRate": 9.9,
-      "volume": 4256,
-      "openInterest": 1879
+      "close": 36.75,
+      "changeRate": -4.05,
+      "volume": 3407,
+      "openInterest": 2481
     },
     {
       "contract": "FRF",
       "name": "FRF期貨",
       "stockId": "",
-      "close": 2010.0,
-      "changeRate": -3.6,
-      "volume": 6238,
-      "openInterest": 5364
+      "close": 2000.0,
+      "changeRate": -0.5,
+      "volume": 877,
+      "openInterest": 5252
     },
     {
       "contract": "FQF",
       "name": "FQF期貨",
       "stockId": "",
-      "close": 219.0,
-      "changeRate": -2.23,
-      "volume": 1956,
-      "openInterest": 2922
+      "close": 217.5,
+      "changeRate": -0.68,
+      "volume": 2985,
+      "openInterest": 2774
     },
     {
       "contract": "FNF",
       "name": "FNF期貨",
       "stockId": "",
-      "close": 27.5,
-      "changeRate": 0.92,
-      "volume": 75,
-      "openInterest": 938
+      "close": 27.3,
+      "changeRate": -0.73,
+      "volume": 87,
+      "openInterest": 868
     },
     {
       "contract": "FKF",
       "name": "FKF期貨",
       "stockId": "",
-      "close": 29.85,
-      "changeRate": 0.67,
-      "volume": 151,
-      "openInterest": 1115
+      "close": 29.9,
+      "changeRate": 0.17,
+      "volume": 129,
+      "openInterest": 1071
     },
     {
       "contract": "FGF",
       "name": "FGF期貨",
       "stockId": "",
-      "close": 7440.0,
-      "changeRate": -0.2,
-      "volume": 227,
-      "openInterest": 33
+      "close": 7520.0,
+      "changeRate": -1.18,
+      "volume": 162,
+      "openInterest": 35
     },
     {
       "contract": "FFF",
       "name": "FFF期貨",
       "stockId": "",
-      "close": 331.5,
-      "changeRate": -1.78,
-      "volume": 171,
-      "openInterest": 540
+      "close": 336.0,
+      "changeRate": 1.2,
+      "volume": 80,
+      "openInterest": 561
     },
     {
       "contract": "FEF",
       "name": "FEF期貨",
       "stockId": "",
-      "close": 40.9,
-      "changeRate": 0.62,
-      "volume": 213,
-      "openInterest": 2813
+      "close": 40.4,
+      "changeRate": -1.22,
+      "volume": 219,
+      "openInterest": 2798
     },
     {
       "contract": "FBF",
       "name": "FBF期貨",
       "stockId": "",
-      "close": 71.5,
-      "changeRate": 1.85,
+      "close": 72.1,
+      "changeRate": 2.56,
       "volume": 1,
-      "openInterest": 40
+      "openInterest": 41
     },
     {
       "contract": "EZF",
@@ -2457,476 +2466,476 @@
       "stockId": "",
       "close": 48.0,
       "changeRate": 0.0,
-      "volume": 16,
-      "openInterest": 101
+      "volume": 2,
+      "openInterest": 100
     },
     {
       "contract": "EYF",
       "name": "EYF期貨",
       "stockId": "",
-      "close": 9.26,
-      "changeRate": -0.43,
-      "volume": 147,
-      "openInterest": 382
+      "close": 10.15,
+      "changeRate": 9.61,
+      "volume": 144,
+      "openInterest": 392
     },
     {
       "contract": "EPF",
       "name": "EPF期貨",
       "stockId": "",
-      "close": 1380.0,
-      "changeRate": -0.72,
-      "volume": 17,
-      "openInterest": 95
+      "close": 1390.0,
+      "changeRate": 0.72,
+      "volume": 33,
+      "openInterest": 82
     },
     {
       "contract": "EOF",
       "name": "EOF期貨",
       "stockId": "",
-      "close": 747.0,
-      "changeRate": 5.21,
-      "volume": 2,
-      "openInterest": 6
+      "close": 740.0,
+      "changeRate": -0.94,
+      "volume": 3,
+      "openInterest": 9
     },
     {
       "contract": "EMF",
       "name": "EMF期貨",
       "stockId": "",
-      "close": 72.0,
-      "changeRate": -0.83,
-      "volume": 394,
-      "openInterest": 1839
+      "close": 71.3,
+      "changeRate": -0.97,
+      "volume": 507,
+      "openInterest": 1896
     },
     {
       "contract": "EKF",
       "name": "EKF期貨",
       "stockId": "",
-      "close": 13.25,
-      "changeRate": -1.12,
-      "volume": 12,
-      "openInterest": 92
+      "close": 13.4,
+      "changeRate": 1.13,
+      "volume": 32,
+      "openInterest": 99
     },
     {
       "contract": "EHF",
       "name": "EHF期貨",
       "stockId": "",
-      "close": 79.2,
-      "changeRate": 1.28,
-      "volume": 437,
-      "openInterest": 2066
+      "close": 79.1,
+      "changeRate": -0.13,
+      "volume": 243,
+      "openInterest": 1990
     },
     {
       "contract": "EGF",
       "name": "EGF期貨",
       "stockId": "",
-      "close": 8.07,
-      "changeRate": 2.28,
-      "volume": 156,
-      "openInterest": 700
+      "close": 8.13,
+      "changeRate": 0.74,
+      "volume": 122,
+      "openInterest": 722
     },
     {
       "contract": "EEF",
       "name": "EEF期貨",
       "stockId": "",
-      "close": 14.15,
-      "changeRate": 2.91,
-      "volume": 111,
-      "openInterest": 392
+      "close": 14.2,
+      "changeRate": 0.35,
+      "volume": 368,
+      "openInterest": 563
     },
     {
       "contract": "EE1",
       "name": "EE1期貨",
       "stockId": "",
-      "close": 14.0,
-      "changeRate": 1.82,
-      "volume": 2,
-      "openInterest": 80
+      "close": 13.95,
+      "changeRate": -1.41,
+      "volume": 1,
+      "openInterest": 79
     },
     {
       "contract": "E4F",
       "name": "E4F期貨",
       "stockId": "",
-      "close": 26071.0,
-      "changeRate": -2.13,
-      "volume": 90,
-      "openInterest": 70
+      "close": 25987.0,
+      "changeRate": 0.09,
+      "volume": 168,
+      "openInterest": 169
     },
     {
       "contract": "DYF",
       "name": "DYF期貨",
       "stockId": "",
       "close": 36.0,
-      "changeRate": 0.56,
-      "volume": 22,
-      "openInterest": 409
+      "changeRate": 0.0,
+      "volume": 64,
+      "openInterest": 440
     },
     {
       "contract": "DXF",
       "name": "DXF期貨",
       "stockId": "",
-      "close": 159.0,
-      "changeRate": 0.0,
-      "volume": 1758,
-      "openInterest": 4822
+      "close": 161.5,
+      "changeRate": 1.57,
+      "volume": 2324,
+      "openInterest": 5186
     },
     {
       "contract": "DWF",
       "name": "DWF期貨",
       "stockId": "",
-      "close": 53.1,
-      "changeRate": -0.19,
-      "volume": 116,
-      "openInterest": 601
+      "close": 53.6,
+      "changeRate": 0.94,
+      "volume": 34,
+      "openInterest": 593
     },
     {
       "contract": "DVF",
       "name": "DVF期貨",
       "stockId": "",
-      "close": 4365.0,
-      "changeRate": -4.69,
-      "volume": 2659,
-      "openInterest": 7609
+      "close": 4335.0,
+      "changeRate": -0.69,
+      "volume": 1492,
+      "openInterest": 7364
     },
     {
       "contract": "DSF",
       "name": "DSF期貨",
       "stockId": "",
-      "close": 33.8,
-      "changeRate": 2.74,
-      "volume": 1281,
-      "openInterest": 9956
+      "close": 33.1,
+      "changeRate": -2.07,
+      "volume": 1071,
+      "openInterest": 10131
     },
     {
       "contract": "DQF",
       "name": "群創期貨",
       "stockId": "3481",
-      "close": 69.8,
-      "changeRate": 3.41,
-      "volume": 139090,
-      "openInterest": 52919
+      "close": 71.8,
+      "changeRate": 2.87,
+      "volume": 66182,
+      "openInterest": 54018
     },
     {
       "contract": "DPF",
       "name": "DPF期貨",
       "stockId": "",
-      "close": 31.9,
-      "changeRate": -2.3,
-      "volume": 351,
-      "openInterest": 289
+      "close": 33.35,
+      "changeRate": 4.55,
+      "volume": 257,
+      "openInterest": 251
     },
     {
       "contract": "DOF",
       "name": "DOF期貨",
       "stockId": "",
-      "close": 66.2,
-      "changeRate": -3.5,
-      "volume": 199,
-      "openInterest": 483
+      "close": 66.9,
+      "changeRate": 1.06,
+      "volume": 44,
+      "openInterest": 488
     },
     {
       "contract": "DNF",
       "name": "DNF期貨",
       "stockId": "",
-      "close": 35.05,
-      "changeRate": -2.37,
-      "volume": 445,
-      "openInterest": 1087
+      "close": 35.55,
+      "changeRate": 1.28,
+      "volume": 707,
+      "openInterest": 1488
     },
     {
       "contract": "DLF",
       "name": "DLF期貨",
       "stockId": "",
-      "close": 144.5,
-      "changeRate": -0.69,
-      "volume": 84,
-      "openInterest": 507
+      "close": 146.0,
+      "changeRate": 1.04,
+      "volume": 64,
+      "openInterest": 531
     },
     {
       "contract": "DKF",
       "name": "DKF期貨",
       "stockId": "",
-      "close": 372.5,
-      "changeRate": 0.4,
-      "volume": 1210,
-      "openInterest": 5430
+      "close": 367.0,
+      "changeRate": -1.34,
+      "volume": 961,
+      "openInterest": 5385
     },
     {
       "contract": "DJF",
       "name": "DJF期貨",
       "stockId": "",
-      "close": 769.0,
-      "changeRate": -2.16,
-      "volume": 261,
-      "openInterest": 398
+      "close": 746.0,
+      "changeRate": -3.12,
+      "volume": 313,
+      "openInterest": 442
     },
     {
       "contract": "DIF",
       "name": "DIF期貨",
       "stockId": "",
-      "close": 172.0,
-      "changeRate": -1.71,
-      "volume": 14452,
-      "openInterest": 15397
+      "close": 162.0,
+      "changeRate": -5.54,
+      "volume": 23908,
+      "openInterest": 14960
     },
     {
       "contract": "DHF",
       "name": "鴻海期貨",
       "stockId": "2317",
-      "close": 259.5,
-      "changeRate": -0.19,
-      "volume": 6300,
-      "openInterest": 20950
+      "close": 261.0,
+      "changeRate": 0.77,
+      "volume": 4582,
+      "openInterest": 20197
     },
     {
       "contract": "DGF",
       "name": "小型日月光期貨",
       "stockId": "3711",
-      "close": 57.9,
-      "changeRate": 9.87,
-      "volume": 1539,
-      "openInterest": 3568
+      "close": 60.2,
+      "changeRate": 3.97,
+      "volume": 4212,
+      "openInterest": 4686
     },
     {
       "contract": "DFF",
       "name": "小型聯發科期貨",
       "stockId": "2454",
-      "close": 24.55,
-      "changeRate": 0.2,
-      "volume": 355,
-      "openInterest": 2308
+      "close": 24.8,
+      "changeRate": 1.02,
+      "volume": 752,
+      "openInterest": 2136
     },
     {
       "contract": "DEF",
       "name": "小型台達電期貨",
       "stockId": "2308",
-      "close": 40.05,
-      "changeRate": 1.14,
-      "volume": 371,
-      "openInterest": 367
+      "close": 39.75,
+      "changeRate": -0.75,
+      "volume": 148,
+      "openInterest": 321
     },
     {
       "contract": "DCF",
       "name": "小型鴻海期貨",
       "stockId": "2317",
-      "close": 23.1,
-      "changeRate": -1.49,
-      "volume": 15,
-      "openInterest": 279
+      "close": 23.2,
+      "changeRate": 0.43,
+      "volume": 5,
+      "openInterest": 274
     },
     {
       "contract": "DBF",
       "name": "小型聯電期貨",
       "stockId": "2303",
-      "close": 23.5,
-      "changeRate": 3.75,
-      "volume": 2729,
-      "openInterest": 3321
+      "close": 24.4,
+      "changeRate": 3.83,
+      "volume": 3377,
+      "openInterest": 4309
     },
     {
       "contract": "DAF",
       "name": "小型台積電期貨",
       "stockId": "2330",
-      "close": 52.3,
-      "changeRate": 0.97,
-      "volume": 693,
-      "openInterest": 3731
+      "close": 51.8,
+      "changeRate": -0.96,
+      "volume": 538,
+      "openInterest": 3863
     },
     {
       "contract": "CZF",
       "name": "CZF期貨",
       "stockId": "",
-      "close": 187.5,
-      "changeRate": -1.06,
-      "volume": 1391,
-      "openInterest": 9304
+      "close": 186.0,
+      "changeRate": -0.8,
+      "volume": 929,
+      "openInterest": 9238
     },
     {
       "contract": "CYF",
       "name": "CYF期貨",
       "stockId": "",
-      "close": 449.5,
-      "changeRate": -2.49,
-      "volume": 18653,
-      "openInterest": 16786
+      "close": 481.5,
+      "changeRate": 7.36,
+      "volume": 19317,
+      "openInterest": 16086
     },
     {
       "contract": "CXF",
       "name": "CXF期貨",
       "stockId": "",
-      "close": 27.7,
-      "changeRate": -1.07,
-      "volume": 143,
-      "openInterest": 1360
+      "close": 27.65,
+      "changeRate": -0.18,
+      "volume": 255,
+      "openInterest": 1435
     },
     {
       "contract": "CWF",
       "name": "CWF期貨",
       "stockId": "",
-      "close": 30.65,
-      "changeRate": -2.08,
-      "volume": 30,
-      "openInterest": 364
+      "close": 30.45,
+      "changeRate": -0.65,
+      "volume": 28,
+      "openInterest": 367
     },
     {
       "contract": "CUF",
       "name": "CUF期貨",
       "stockId": "",
-      "close": 11.9,
-      "changeRate": 3.48,
-      "volume": 79,
-      "openInterest": 344
+      "close": 11.7,
+      "changeRate": -1.68,
+      "volume": 43,
+      "openInterest": 306
     },
     {
       "contract": "CSF",
       "name": "CSF期貨",
       "stockId": "",
-      "close": 38.1,
-      "changeRate": 0.66,
-      "volume": 1856,
-      "openInterest": 5963
+      "close": 38.0,
+      "changeRate": -0.26,
+      "volume": 1550,
+      "openInterest": 5991
     },
     {
       "contract": "CRF",
       "name": "CRF期貨",
       "stockId": "",
-      "close": 28.85,
-      "changeRate": 0.87,
-      "volume": 190,
-      "openInterest": 501
+      "close": 28.65,
+      "changeRate": -0.69,
+      "volume": 151,
+      "openInterest": 548
     },
     {
       "contract": "CQF",
       "name": "CQF期貨",
       "stockId": "",
-      "close": 75.2,
-      "changeRate": -0.4,
-      "volume": 37,
-      "openInterest": 420
+      "close": 76.2,
+      "changeRate": 1.33,
+      "volume": 23,
+      "openInterest": 421
     },
     {
       "contract": "CNF",
       "name": "力成期貨",
       "stockId": "6239",
-      "close": 70.5,
-      "changeRate": -3.16,
-      "volume": 1030,
-      "openInterest": 1998
+      "close": 70.9,
+      "changeRate": 0.57,
+      "volume": 381,
+      "openInterest": 2081
     },
     {
       "contract": "CMF",
       "name": "旺宏期貨",
       "stockId": "2337",
-      "close": 31.55,
-      "changeRate": -2.77,
-      "volume": 618,
-      "openInterest": 2413
+      "close": 31.95,
+      "changeRate": 1.27,
+      "volume": 222,
+      "openInterest": 2445
     },
     {
       "contract": "CLF",
       "name": "台玻期貨",
       "stockId": "1802",
-      "close": 44.6,
-      "changeRate": -1.76,
-      "volume": 189,
-      "openInterest": 515
+      "close": 46.1,
+      "changeRate": 3.36,
+      "volume": 336,
+      "openInterest": 504
     },
     {
       "contract": "CKF",
       "name": "彩晶期貨",
       "stockId": "6116",
-      "close": 110.5,
-      "changeRate": -2.64,
-      "volume": 391,
-      "openInterest": 2161
+      "close": 112.0,
+      "changeRate": 1.36,
+      "volume": 390,
+      "openInterest": 2246
     },
     {
       "contract": "CJF",
       "name": "友達期貨",
       "stockId": "2409",
-      "close": 37.0,
-      "changeRate": -1.2,
-      "volume": 488,
-      "openInterest": 464
+      "close": 37.45,
+      "changeRate": 1.22,
+      "volume": 404,
+      "openInterest": 404
     },
     {
       "contract": "CHF",
       "name": "CHF期貨",
       "stockId": "",
-      "close": 30.25,
-      "changeRate": 4.31,
-      "volume": 46607,
-      "openInterest": 20551
+      "close": 30.55,
+      "changeRate": 0.83,
+      "volume": 26982,
+      "openInterest": 21749
     },
     {
       "contract": "CGF",
       "name": "CGF期貨",
       "stockId": "",
-      "close": 37.9,
-      "changeRate": 4.12,
-      "volume": 3516,
-      "openInterest": 8491
+      "close": 36.9,
+      "changeRate": -2.64,
+      "volume": 1686,
+      "openInterest": 8617
     },
     {
       "contract": "CFF",
       "name": "CFF期貨",
       "stockId": "",
-      "close": 54.6,
-      "changeRate": 9.86,
-      "volume": 1310,
-      "openInterest": 2578
+      "close": 58.6,
+      "changeRate": 7.33,
+      "volume": 3269,
+      "openInterest": 2588
     },
     {
       "contract": "CEF",
       "name": "CEF期貨",
       "stockId": "",
-      "close": 136.0,
-      "changeRate": -1.45,
-      "volume": 217,
-      "openInterest": 1568
+      "close": 137.0,
+      "changeRate": 0.74,
+      "volume": 372,
+      "openInterest": 1600
     },
     {
       "contract": "CDF",
       "name": "台積電期貨",
       "stockId": "2330",
       "close": 2425.0,
-      "changeRate": -3.77,
-      "volume": 12684,
-      "openInterest": 30189
+      "changeRate": -0.21,
+      "volume": 8188,
+      "openInterest": 29551
     },
     {
       "contract": "CCF",
       "name": "聯電期貨",
       "stockId": "2303",
-      "close": 181.5,
-      "changeRate": 5.83,
-      "volume": 122139,
-      "openInterest": 122457
+      "close": 182.5,
+      "changeRate": 0.27,
+      "volume": 87432,
+      "openInterest": 124244
     },
     {
       "contract": "CBF",
       "name": "CBF期貨",
       "stockId": "",
-      "close": 19.35,
-      "changeRate": 0.26,
-      "volume": 510,
-      "openInterest": 3872
+      "close": 19.2,
+      "changeRate": -0.78,
+      "volume": 349,
+      "openInterest": 3853
     },
     {
       "contract": "CAF",
       "name": "南亞期貨",
       "stockId": "1303",
-      "close": 163.0,
-      "changeRate": 5.16,
-      "volume": 11967,
-      "openInterest": 10486
+      "close": 155.5,
+      "changeRate": -4.6,
+      "volume": 8864,
+      "openInterest": 10613
     },
     {
       "contract": "BRF",
       "name": "BRF期貨",
       "stockId": "",
-      "close": 2424.0,
-      "changeRate": -1.32,
-      "volume": 19,
-      "openInterest": 31
+      "close": 2305.0,
+      "changeRate": -4.91,
+      "volume": 7,
+      "openInterest": 18
     }
   ]
 }
