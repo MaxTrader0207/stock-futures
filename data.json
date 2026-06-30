@@ -1,5 +1,5 @@
 {
-  "updateTime": "2026-06-30 23:56",
+  "updateTime": "2026-06-30 23:59",
   "date": "2026-06-30",
   "count": 325,
   "data": [
@@ -2273,7 +2273,7 @@
     },
     {
       "contract": "GDF",
-      "name": "GDF期貨",
+      "name": "黃金期貨",
       "stockId": "",
       "close": 4092.6,
       "changeRate": 0.95,
@@ -2354,7 +2354,7 @@
     },
     {
       "contract": "FT1",
-      "name": "FT1期貨",
+      "name": "富時台灣期貨",
       "stockId": "",
       "close": 223.0,
       "changeRate": 0.0,
@@ -2435,7 +2435,7 @@
     },
     {
       "contract": "F1F",
-      "name": "F1F期貨",
+      "name": "富時台灣期貨",
       "stockId": "",
       "close": 10552.0,
       "changeRate": 0.67,
@@ -2921,7 +2921,7 @@
     },
     {
       "contract": "BRF",
-      "name": "BRF期貨",
+      "name": "布蘭特原油期貨",
       "stockId": "",
       "close": 2303.5,
       "changeRate": -2.06,
