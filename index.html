@@ -16,70 +16,73 @@
         }
         * { box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", sans-serif;
-               background: var(--bg); margin: 0; color: var(--text); }
-        header { background: var(--primary); color: #fff; padding: 14px 16px 12px;
+               background: var(--bg); margin: 0; color: var(--text); font-size: 14px; }
+        header { background: var(--primary); color: #fff; padding: 10px 12px 9px;
                  position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(26,86,219,.3); }
         .header-row { display: flex; align-items: center; justify-content: space-between; }
-        .header-title { font-size: 17px; font-weight: 700; }
-        .header-meta { font-size: 11px; color: #b3c6ff; margin-top: 4px; }
+        .header-title { font-size: 15px; font-weight: 700; }
+        .header-meta { font-size: 10px; color: #b3c6ff; margin-top: 2px; }
         #refresh-btn { background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3);
-            color: #fff; border-radius: 20px; padding: 5px 12px; font-size: 12px; cursor: pointer;
-            display: flex; align-items: center; gap: 4px; }
+            color: #fff; border-radius: 16px; padding: 4px 10px; font-size: 11px; cursor: pointer;
+            display: flex; align-items: center; gap: 3px; }
         #refresh-btn.spinning svg { animation: spin .8s linear infinite; }
         @keyframes spin { to { transform: rotate(360deg); } }
         .tabs { display: flex; background: var(--card); border-bottom: 1px solid var(--border);
-                position: sticky; top: 57px; z-index: 99; }
-        .tab { flex: 1; text-align: center; padding: 11px 0 10px; font-size: 13px;
+                position: sticky; top: 45px; z-index: 99; }
+        .tab { flex: 1; text-align: center; padding: 9px 0 8px; font-size: 12px;
                font-weight: 600; color: var(--muted); border-bottom: 3px solid transparent; cursor: pointer; }
         .tab.bull.active { color: var(--bull); border-color: var(--bull); }
         .tab.bear.active { color: var(--bear); border-color: var(--bear); }
         .tab.vol.active  { color: var(--vol);  border-color: var(--vol); }
-        .list-wrap { display: none; padding: 10px 10px 24px; }
+        .list-wrap { display: none; padding: 8px 8px 20px; }
         .list-wrap.active { display: block; }
-        .card { background: var(--card); border-radius: 10px; padding: 13px 14px;
-                margin-bottom: 8px; box-shadow: var(--shadow);
-                display: flex; align-items: center; gap: 10px; }
-        .rank { width: 26px; height: 26px; border-radius: 50%; display: flex;
+        .card { background: var(--card); border-radius: 9px; padding: 9px 11px;
+                margin-bottom: 6px; box-shadow: var(--shadow);
+                display: flex; align-items: center; gap: 8px; }
+        .rank { width: 22px; height: 22px; border-radius: 50%; display: flex;
                 align-items: center; justify-content: center;
-                font-size: 12px; font-weight: 700; flex-shrink: 0; }
+                font-size: 11px; font-weight: 700; flex-shrink: 0; }
         .rank.bull { background: var(--bull-bg); color: var(--bull); }
         .rank.bear { background: var(--bear-bg); color: var(--bear); }
         .rank.vol  { background: var(--vol-bg);  color: var(--vol); }
         .card-body { flex: 1; min-width: 0; }
-        .stock-name { font-size: 15px; font-weight: 700; display: flex; align-items: center; gap: 6px; }
-        .sid-tag { font-size: 10px; background: #f0f0f0; color: #666;
-                   padding: 1px 5px; border-radius: 4px; flex-shrink: 0; }
-        .stock-meta { font-size: 11.5px; color: var(--muted); margin-top: 3px; }
-        .card-right { text-align: right; flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
-        .stock-price { font-size: 16px; font-weight: 700; }
-        .stock-change { font-size: 13px; font-weight: 600; margin-top: 2px; }
+        .stock-name { font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 5px;
+                      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .sid-tag { font-size: 9px; background: #f0f0f0; color: #666;
+                   padding: 1px 4px; border-radius: 3px; flex-shrink: 0; }
+        .stock-meta { font-size: 10px; color: var(--muted); margin-top: 2px;
+                      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .card-right { text-align: right; flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 1px; }
+        .stock-price { font-size: 14px; font-weight: 700; }
+        .stock-change { font-size: 11px; font-weight: 600; margin-top: 1px; }
         .stock-change.bull { color: var(--bull); }
         .stock-change.bear { color: var(--bear); }
         .stock-change.flat { color: var(--neutral); }
         .bias-tag {
-            font-size: 11px; font-weight: 600; margin-top: 3px;
-            display: inline-block; padding: 1px 6px; border-radius: 4px;
+            font-size: 9.5px; font-weight: 600; margin-top: 2px;
+            display: inline-block; padding: 1px 5px; border-radius: 4px;
+            white-space: nowrap;
         }
         .bias-tag.bull { background: var(--bull-bg); color: var(--bull); }
         .bias-tag.bear { background: var(--bear-bg); color: var(--bear); }
         .bias-tag.flat { background: #f0f0f0; color: var(--neutral); }
         .bias-tag.pending { background: #f5f5f5; color: #bbb; }
         .sort-bar { display: flex; align-items: center; justify-content: space-between;
-                    padding: 6px 2px 4px; }
-        .sort-count { font-size: 12px; font-weight: 600; color: var(--text); }
+                    padding: 5px 2px 3px; }
+        .sort-count { font-size: 11px; font-weight: 600; color: var(--text); }
         select { border: 1px solid var(--border); background: var(--card);
-                 border-radius: 6px; padding: 4px 8px; font-size: 12px; color: var(--text); cursor: pointer; }
-        .skel-card { background: var(--card); border-radius: 10px; padding: 18px 14px;
-                     margin-bottom: 8px; box-shadow: var(--shadow); }
+                 border-radius: 6px; padding: 3px 6px; font-size: 11px; color: var(--text); cursor: pointer; }
+        .skel-card { background: var(--card); border-radius: 9px; padding: 14px 11px;
+                     margin-bottom: 6px; box-shadow: var(--shadow); }
         .skel-line { background: linear-gradient(90deg,#e8e8e8 25%,#f4f4f4 50%,#e8e8e8 75%);
                      background-size: 200% 100%; animation: shimmer 1.2s infinite;
-                     border-radius: 4px; height: 12px; margin-bottom: 8px; }
+                     border-radius: 4px; height: 10px; margin-bottom: 6px; }
         .skel-line.w60 { width: 60%; } .skel-line.w35 { width: 35%; }
         @keyframes shimmer { to { background-position: -200% 0; } }
-        .notice { background: #fffbea; border: 1px solid #f5d000; border-radius: 10px;
-                  padding: 12px 14px; margin: 8px 0; font-size: 13px; line-height: 1.6; }
-        .source-tag { font-size: 11px; color: var(--muted); text-align: center;
-                      padding: 6px 0 2px; }
+        .notice { background: #fffbea; border: 1px solid #f5d000; border-radius: 9px;
+                  padding: 10px 12px; margin: 6px 0; font-size: 12px; line-height: 1.5; }
+        .source-tag { font-size: 10px; color: var(--muted); text-align: center;
+                      padding: 5px 0 2px; }
     </style>
 </head>
 <body>
@@ -216,27 +219,27 @@ function renderList(id, rows, type) {
 
         // 第一行 meta：未平倉/成交量 + 振幅
         const ampStr = (d.amplitude !== null && d.amplitude !== undefined)
-            ? `　振幅：${d.amplitude.toFixed(2)}%` : '';
+            ? ` · 振幅${d.amplitude.toFixed(2)}%` : '';
         const meta = type === 'vol'
-            ? `成交量：${d.volume.toLocaleString()} 口${ampStr}`
-            : `未平倉：${d.openInterest.toLocaleString()} 口　成交量：${d.volume.toLocaleString()} 口${ampStr}`;
+            ? `量${d.volume.toLocaleString()}${ampStr}`
+            : `倉${d.openInterest.toLocaleString()} 量${d.volume.toLocaleString()}${ampStr}`;
 
         // 第二行 meta：開高低 + 月均量
         const ohlStr = (d.open && d.high && d.low)
-            ? `開${d.open}　高${d.high}　低${d.low}` : '';
+            ? `開${d.open} 高${d.high} 低${d.low}` : '';
         const mavStr = (d.monthlyAvgVolume !== null && d.monthlyAvgVolume !== undefined)
-            ? `　月均量：${d.monthlyAvgVolume.toLocaleString()} 口` : '';
+            ? ` · 月均量${d.monthlyAvgVolume.toLocaleString()}` : '';
         const meta2 = (ohlStr || mavStr) ? `${ohlStr}${mavStr}` : '';
 
         // OI增減標籤
         let oiHtml;
         if (d.oiChange === null || d.oiChange === undefined) {
-            oiHtml = `<span class="bias-tag pending">OI增減：累積中</span>`;
+            oiHtml = `<span class="bias-tag pending">OI累積中</span>`;
         } else {
             const oc = d.oiChange;
             const ocClass = oc > 0 ? 'bull' : oc < 0 ? 'bear' : 'flat';
             const ocStr = oc > 0 ? `+${oc.toLocaleString()}` : oc.toLocaleString();
-            oiHtml = `<span class="bias-tag ${ocClass}">OI增減 ${ocStr}</span>`;
+            oiHtml = `<span class="bias-tag ${ocClass}">OI ${ocStr}</span>`;
         }
 
         return `<div class="card">
