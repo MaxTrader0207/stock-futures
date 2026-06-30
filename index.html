@@ -219,8 +219,8 @@ function renderList(id, rows, type) {
 
         // 第一行：未平倉/成交量
         const meta = type === 'vol'
-            ? `量 ${d.volume.toLocaleString()}`
-            : `倉 ${d.openInterest.toLocaleString()}　量 ${d.volume.toLocaleString()}`;
+            ? `成交量 ${d.volume.toLocaleString()}`
+            : `未平倉 ${d.openInterest.toLocaleString()}　成交量 ${d.volume.toLocaleString()}`;
 
         // 第二行：振幅 + 月均量
         const ampStr = (d.amplitude !== null && d.amplitude !== undefined)
