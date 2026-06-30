@@ -40,6 +40,7 @@
         .card { background: var(--card); border-radius: 9px; padding: 9px 11px;
                 margin-bottom: 6px; box-shadow: var(--shadow);
                 display: flex; align-items: flex-start; gap: 8px; }
+        .card.high-amp { background: #f5f0e1; }
         .rank { width: 22px; height: 22px; border-radius: 50%; display: flex;
                 align-items: center; justify-content: center; margin-top: 1px;
                 font-size: 11px; font-weight: 700; flex-shrink: 0; }
@@ -83,6 +84,10 @@
                   padding: 10px 12px; margin: 6px 0; font-size: 12px; line-height: 1.5; }
         .source-tag { font-size: 10px; color: var(--muted); text-align: center;
                       padding: 5px 0 2px; }
+        .disclaimer { font-size: 10.5px; color: var(--bull); font-weight: 600;
+                      text-align: center; padding: 2px 16px 12px; }
+        .highlight-time { color: var(--bull); background: #fff3a0;
+                           padding: 1px 4px; border-radius: 3px; font-weight: 700; }
     </style>
 </head>
 <body>
@@ -111,8 +116,8 @@
     <div class="sort-bar">
         <span class="sort-count" id="bull-count"></span>
         <select id="sort-bull" onchange="renderAll()">
-            <option value="oi_desc">按未平倉↓</option>
             <option value="change_desc">按漲幅↓</option>
+            <option value="oi_desc">按未平倉↓</option>
             <option value="vol_desc">按成交量↓</option>
         </select>
     </div>
@@ -122,8 +127,8 @@
     <div class="sort-bar">
         <span class="sort-count" id="bear-count"></span>
         <select id="bear-sort" onchange="renderAll()">
-            <option value="oi_desc">按未平倉↓</option>
             <option value="change_asc">按跌幅↓</option>
+            <option value="oi_desc">按未平倉↓</option>
             <option value="vol_desc">按成交量↓</option>
         </select>
     </div>
@@ -141,7 +146,8 @@
     <div id="vol-list"></div>
 </div>
 
-<div class="source-tag">資料來源：臺灣期貨交易所 OpenAPI｜每日 15:30 自動更新</div>
+<div class="source-tag">資料來源：臺灣期貨交易所 OpenAPI｜每日 <span class="highlight-time">15:30</span> 自動更新</div>
+<div class="disclaimer">以上資訊僅供參考，不作為投資決策，盈虧自負</div>
 
 <script>
 let allData = [];
@@ -244,7 +250,9 @@ function renderList(id, rows, type) {
             oiHtml = `<span class="bias-tag ${ocClass}">OI ${ocStr}</span>`;
         }
 
-        return `<div class="card">
+        const highAmpClass = (d.amplitude !== null && d.amplitude !== undefined && d.amplitude > 8) ? ' high-amp' : '';
+
+        return `<div class="card${highAmpClass}">
             <div class="rank ${type}">${i+1}</div>
             <div class="card-body">
                 <div class="stock-name">${d.name}${d.stockId ? `<span class="sid-tag">${d.stockId}</span>` : ''}</div>
