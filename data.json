@@ -1,11 +1,11 @@
 {
-  "updateTime": "2026-06-30 23:50",
+  "updateTime": "2026-06-30 23:56",
   "date": "2026-06-30",
   "count": 325,
   "data": [
     {
       "contract": "ZFF",
-      "name": "ZFF期貨",
+      "name": "小型金融期貨",
       "stockId": "",
       "close": 3093.6,
       "changeRate": -0.01,
@@ -14,7 +14,7 @@
     },
     {
       "contract": "ZEF",
-      "name": "ZEF期貨",
+      "name": "小型電子期貨",
       "stockId": "",
       "close": 2938.7,
       "changeRate": 2.39,
@@ -32,7 +32,7 @@
     },
     {
       "contract": "XIF",
-      "name": "XIF期貨",
+      "name": "非金電期貨",
       "stockId": "",
       "close": 15222.0,
       "changeRate": 1.74,
@@ -356,7 +356,7 @@
     },
     {
       "contract": "TX",
-      "name": "TX期貨",
+      "name": "台指期貨",
       "stockId": "",
       "close": 45550.0,
       "changeRate": 2.47,
@@ -365,7 +365,7 @@
     },
     {
       "contract": "TMF",
-      "name": "TMF期貨",
+      "name": "微型台指期貨",
       "stockId": "",
       "close": 45551.0,
       "changeRate": 2.47,
@@ -374,7 +374,7 @@
     },
     {
       "contract": "TJF",
-      "name": "TJF期貨",
+      "name": "東證期貨",
       "stockId": "",
       "close": 3986.75,
       "changeRate": -0.02,
@@ -392,7 +392,7 @@
     },
     {
       "contract": "TF",
-      "name": "TF期貨",
+      "name": "金融期貨",
       "stockId": "",
       "close": 3097.0,
       "changeRate": 0.1,
@@ -401,7 +401,7 @@
     },
     {
       "contract": "TE",
-      "name": "TE期貨",
+      "name": "電子期貨",
       "stockId": "",
       "close": 2935.0,
       "changeRate": 2.26,
@@ -482,7 +482,7 @@
     },
     {
       "contract": "SOF",
-      "name": "SOF期貨",
+      "name": "半導體30期貨",
       "stockId": "",
       "close": 16050.0,
       "changeRate": 1.17,
@@ -1544,7 +1544,7 @@
     },
     {
       "contract": "MTX",
-      "name": "MTX期貨",
+      "name": "小型台指期貨",
       "stockId": "",
       "close": 45558.0,
       "changeRate": 2.49,
@@ -1589,7 +1589,7 @@
     },
     {
       "contract": "M1F",
-      "name": "M1F期貨",
+      "name": "台灣中型100期貨",
       "stockId": "",
       "close": 36617.0,
       "changeRate": 2.42,
@@ -2300,7 +2300,7 @@
     },
     {
       "contract": "G2F",
-      "name": "G2F期貨",
+      "name": "富櫃200期貨",
       "stockId": "",
       "close": 18950.0,
       "changeRate": -1.16,
@@ -2525,7 +2525,7 @@
     },
     {
       "contract": "E4F",
-      "name": "E4F期貨",
+      "name": "永續期貨",
       "stockId": "",
       "close": 24982.0,
       "changeRate": 1.23,
@@ -2912,7 +2912,7 @@
     },
     {
       "contract": "BTF",
-      "name": "BTF期貨",
+      "name": "生技期貨",
       "stockId": "",
       "close": 4100.0,
       "changeRate": 5.13,
