@@ -14,6 +14,7 @@
             --muted: #8a8a9a; --border: #e5e7eb;
             --shadow: 0 1px 4px rgba(0,0,0,0.07);
         }
+        html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
         * { box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", sans-serif;
                background: var(--bg); margin: 0; color: var(--text); font-size: 14px; }
@@ -38,9 +39,9 @@
         .list-wrap.active { display: block; }
         .card { background: var(--card); border-radius: 9px; padding: 9px 11px;
                 margin-bottom: 6px; box-shadow: var(--shadow);
-                display: flex; align-items: center; gap: 8px; }
+                display: flex; align-items: flex-start; gap: 8px; }
         .rank { width: 22px; height: 22px; border-radius: 50%; display: flex;
-                align-items: center; justify-content: center;
+                align-items: center; justify-content: center; margin-top: 1px;
                 font-size: 11px; font-weight: 700; flex-shrink: 0; }
         .rank.bull { background: var(--bull-bg); color: var(--bull); }
         .rank.bear { background: var(--bear-bg); color: var(--bear); }
@@ -50,9 +51,8 @@
                       white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .sid-tag { font-size: 9px; background: #f0f0f0; color: #666;
                    padding: 1px 4px; border-radius: 3px; flex-shrink: 0; }
-        .stock-meta { font-size: 10px; color: var(--muted); margin-top: 2px;
-                      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .card-right { text-align: right; flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 1px; }
+        .stock-meta { font-size: 10px; color: var(--muted); margin-top: 2px; }
+        .card-right { text-align: right; flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 1px; margin-top: 1px; }
         .stock-price { font-size: 14px; font-weight: 700; }
         .stock-change { font-size: 11px; font-weight: 600; margin-top: 1px; }
         .stock-change.bull { color: var(--bull); }
@@ -217,19 +217,21 @@ function renderList(id, rows, type) {
         const rateStr = rate > 0 ? `▲ ${rate.toFixed(2)}%` : rate < 0 ? `▼ ${Math.abs(rate).toFixed(2)}%` : '–';
         const rateClass = rate > 0 ? 'bull' : rate < 0 ? 'bear' : 'flat';
 
-        // 第一行 meta：未平倉/成交量 + 振幅
-        const ampStr = (d.amplitude !== null && d.amplitude !== undefined)
-            ? ` · 振幅${d.amplitude.toFixed(2)}%` : '';
+        // 第一行：未平倉/成交量
         const meta = type === 'vol'
-            ? `量${d.volume.toLocaleString()}${ampStr}`
-            : `倉${d.openInterest.toLocaleString()} 量${d.volume.toLocaleString()}${ampStr}`;
+            ? `量 ${d.volume.toLocaleString()}`
+            : `倉 ${d.openInterest.toLocaleString()}　量 ${d.volume.toLocaleString()}`;
 
-        // 第二行 meta：開高低 + 月均量
-        const ohlStr = (d.open && d.high && d.low)
-            ? `開${d.open} 高${d.high} 低${d.low}` : '';
+        // 第二行：振幅 + 月均量
+        const ampStr = (d.amplitude !== null && d.amplitude !== undefined)
+            ? `振幅 ${d.amplitude.toFixed(2)}%` : '';
         const mavStr = (d.monthlyAvgVolume !== null && d.monthlyAvgVolume !== undefined)
-            ? ` · 月均量${d.monthlyAvgVolume.toLocaleString()}` : '';
-        const meta2 = (ohlStr || mavStr) ? `${ohlStr}${mavStr}` : '';
+            ? `月均量 ${d.monthlyAvgVolume.toLocaleString()}` : '';
+        const meta2 = [ampStr, mavStr].filter(Boolean).join('　');
+
+        // 第三行：開高低
+        const meta3 = (d.open && d.high && d.low)
+            ? `開${d.open}　高${d.high}　低${d.low}` : '';
 
         // OI增減標籤
         let oiHtml;
@@ -248,6 +250,7 @@ function renderList(id, rows, type) {
                 <div class="stock-name">${d.name}${d.stockId ? `<span class="sid-tag">${d.stockId}</span>` : ''}</div>
                 <div class="stock-meta">${meta}</div>
                 ${meta2 ? `<div class="stock-meta">${meta2}</div>` : ''}
+                ${meta3 ? `<div class="stock-meta">${meta3}</div>` : ''}
             </div>
             <div class="card-right">
                 <div class="stock-price">${d.close.toLocaleString()}</div>
