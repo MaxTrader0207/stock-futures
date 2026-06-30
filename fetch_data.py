@@ -15,6 +15,11 @@ FALLBACK_NAME_MAP = {
     "CAF":"南亞期貨:1303","CCF":"聯電期貨:2303","QZF":"力積電期貨:6770",
     "FZF":"華邦電期貨:2344","DHF":"鴻海期貨:2317","DQF":"群創期貨:3481",
     "CDF":"台積電期貨:2330","DVF":"聯發科期貨:2454",
+    # 指數期貨（非個股期貨，但顯示更友善的中文名稱）
+    "TX":"台指期貨:","MTX":"小型台指期貨:","TMF":"微型台指期貨:","M1F":"台灣中型100期貨:",
+    "TE":"電子期貨:","ZEF":"小型電子期貨:","SOF":"半導體30期貨:","TF":"金融期貨:",
+    "ZFF":"小型金融期貨:","XIF":"非金電期貨:","TJF":"東證期貨:","GTF":"櫃買期貨:",
+    "G2F":"富櫃200期貨:","E4F":"永續期貨:","BTF":"生技期貨:","SHF":"航運期貨:",
 }
 
 def fetch_name_map():
@@ -133,8 +138,17 @@ def process(raw, name_map):
             "openInterest": oi,
         })
 
-    if unmatched:
-        print(f"  ⚠ 未對照到名稱的合約代碼（{len(unmatched)}個）: {unmatched[:20]}")
+    # 指數期貨（非個股期貨）不需要名稱對照，過濾掉避免誤判
+    INDEX_FUTURES = {
+        "TX","MTX","TMF","M1F","TE","ZEF","SOF","TF","ZFF","XIF","TJF",
+        "XJF","XEF","XBF","UNF","UDF","TGF","SXF","RHF","QO1",
+        "GTF","G2F","E4F","BTF","SHF","NQF",
+    }
+    real_unmatched = [c for c in unmatched if c not in INDEX_FUTURES]
+    if real_unmatched:
+        print(f"  ⚠ 未對照到名稱的合約代碼（{len(real_unmatched)}個，已排除指數期貨）: {real_unmatched}")
+    else:
+        print(f"  ✅ 所有個股期貨皆已對照成功（已排除 {len(unmatched)} 檔指數期貨）")
 
     return results
 
