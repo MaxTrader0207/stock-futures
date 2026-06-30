@@ -1,10 +1,8 @@
 """
 個股期貨動能排行 - 資料抓取腳本
-資料來源：臺灣期貨交易所 OpenAPI /DailyMarketReportFut
-欄位：Date, Contract, ContractMonth(Week), Open, High, Low, Last,
-      Change, %, Volume, SettlementPrice, OpenInterest,
-      BestBid, BestAsk, HistoricalHigh, HistoricalLow,
-      TradingHalt, TradingSession
+資料來源：
+  - 行情：臺灣期貨交易所 OpenAPI /DailyMarketReportFut
+  - 名稱：玩股網 /futures/all-stock-futures-list（server端抓，無CORS問題）
 """
 import requests, json, sys
 from datetime import datetime, timezone, timedelta
@@ -12,25 +10,56 @@ from collections import defaultdict
 
 TW = timezone(timedelta(hours=8))
 
-NAME_MAP = {
+# 備用名稱對照表（API 抓不到時使用）
+FALLBACK_NAME_MAP = {
     "CAF":"南亞期貨:1303","CCF":"聯電期貨:2303","QZF":"力積電期貨:6770",
-    "FZF":"華邦電期貨:2344","DHF":"鴻海期貨:2317","DQF":"群創期貨:3481",
-    "CDF":"台積電期貨:2330","YOF":"國巨期貨:2327","BAF":"台塑期貨:1301",
-    "AEF":"華新科期貨:2492","AFF":"台達電期貨:2308","AGF":"日月光期貨:3711",
-    "AHF":"聯發科期貨:2454","CJF":"友達期貨:2409","CKF":"彩晶期貨:6116",
-    "CLF":"台玻期貨:1802","CMF":"旺宏期貨:2337","CNF":"力成期貨:6239",
-    "COF":"南電期貨:8046","CPF":"合晶期貨:6182",
-    "DAF":"小型台積電期貨:2330","DBF":"小型聯電期貨:2303",
-    "DCF":"小型鴻海期貨:2317","DDF":"小型國巨期貨:2327",
-    "DEF":"小型台達電期貨:2308","DFF":"小型聯發科期貨:2454",
-    "DGF":"小型日月光期貨:3711","QFF":"小型玉晶光期貨:3406",
-    "QWF":"小型穩懋期貨:3105","QCF":"小型群聯期貨:8299",
-    "RFF":"小型元大台灣50期貨:0050","YDF":"小型南電期貨:8046",
-    "ZFF":"華邦電期貨:2344","BEF":"南亞科期貨:2408",
+    "FZF":"華邦電期貨:2344","ZFF":"華邦電期貨:2344","DHF":"鴻海期貨:2317",
+    "DQF":"群創期貨:3481","CDF":"台積電期貨:2330","YOF":"國巨期貨:2327",
+    "BAF":"台塑期貨:1301","AEF":"華新科期貨:2492","AFF":"台達電期貨:2308",
+    "AGF":"日月光期貨:3711","AHF":"聯發科期貨:2454","CJF":"友達期貨:2409",
+    "CKF":"彩晶期貨:6116","CLF":"台玻期貨:1802","CMF":"旺宏期貨:2337",
+    "CNF":"力成期貨:6239","COF":"南電期貨:8046","CPF":"合晶期貨:6182",
+    "BEF":"南亞科期貨:2408","DAF":"小型台積電期貨:2330","DBF":"小型聯電期貨:2303",
+    "DCF":"小型鴻海期貨:2317","DDF":"小型國巨期貨:2327","DEF":"小型台達電期貨:2308",
+    "DFF":"小型聯發科期貨:2454","DGF":"小型日月光期貨:3711","QFF":"小型玉晶光期貨:3406",
+    "QWF":"小型穩懋期貨:3105","QCF":"小型群聯期貨:8299","YDF":"小型南電期貨:8046",
+    "RFF":"小型元大台灣50期貨:0050",
 }
 
-def get_name_stock(code):
-    val = NAME_MAP.get(code, "")
+def fetch_name_map():
+    """從玩股網抓取完整名稱對照表（server端呼叫，無CORS限制）"""
+    try:
+        r = requests.get(
+            "https://www.wantgoo.com/futures/all-stock-futures-list",
+            headers={
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0 Safari/537.36",
+                "Referer": "https://www.wantgoo.com/futures/stock-futures-ranking",
+                "Origin": "https://www.wantgoo.com",
+                "Accept": "application/json",
+            },
+            timeout=15
+        )
+        if r.status_code == 200:
+            data = r.json()
+            name_map = {}
+            for item in data:
+                # id 格式: "WCCF&" -> strip & -> "WCCF" -> strip W -> "CCF"
+                raw_id = item.get("id","").rstrip("&")
+                code = raw_id[1:] if raw_id.startswith("W") else raw_id
+                name = item.get("name","")
+                stock_id = item.get("stockId","")
+                if code and name:
+                    name_map[code] = f"{name}:{stock_id}"
+            print(f"  玩股網名稱對照表：載入 {len(name_map)} 筆")
+            return name_map
+        else:
+            print(f"  玩股網名稱API回傳 {r.status_code}，改用備用表")
+    except Exception as e:
+        print(f"  玩股網名稱API失敗（{e}），改用備用表")
+    return {}
+
+def get_name_stock(code, name_map):
+    val = name_map.get(code) or FALLBACK_NAME_MAP.get(code, "")
     if ":" in val:
         name, sid = val.split(":", 1)
         return name, sid
@@ -49,20 +78,18 @@ def to_int(s, default=0):
         return default
 
 def fetch_daily_report():
-    url = "https://openapi.taifex.com.tw/v1/DailyMarketReportFut"
-    r = requests.get(url, headers={
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0",
-        "Accept": "application/json",
-    }, timeout=30)
+    r = requests.get(
+        "https://openapi.taifex.com.tw/v1/DailyMarketReportFut",
+        headers={"User-Agent":"Mozilla/5.0","Accept":"application/json"},
+        timeout=30
+    )
     r.raise_for_status()
     return r.json()
 
-def process(raw):
-    # 只取一般交易時段
+def process(raw, name_map):
     regular = [r for r in raw if r.get("TradingSession","").strip() == "一般"]
     print(f"  一般時段筆數: {len(regular)}")
 
-    # 每個合約代碼取成交量最大的那筆（近月）
     by_code = defaultdict(list)
     for row in regular:
         code = row.get("Contract","").strip()
@@ -71,26 +98,25 @@ def process(raw):
 
     results = []
     for code, rows in by_code.items():
-        # 取成交量最大（近月）
         rows.sort(key=lambda r: to_int(r.get("Volume",0)), reverse=True)
         row = rows[0]
 
         close       = to_float(row.get("Last") or row.get("SettlementPrice", 0))
-        change_rate = to_float(row.get("%", 0))   # 欄位名稱就是 "%"
+        change_rate = to_float(row.get("%", 0))
         volume      = to_int(row.get("Volume", 0))
         oi          = to_int(row.get("OpenInterest", 0))
 
         if volume == 0:
             continue
 
-        name, stock_id = get_name_stock(code)
+        name, stock_id = get_name_stock(code, name_map)
         results.append({
-            "contract":    code,
-            "name":        name,
-            "stockId":     stock_id,
-            "close":       close,
-            "changeRate":  round(change_rate, 2),
-            "volume":      volume,
+            "contract":     code,
+            "name":         name,
+            "stockId":      stock_id,
+            "close":        close,
+            "changeRate":   round(change_rate, 2),
+            "volume":       volume,
             "openInterest": oi,
         })
 
@@ -98,8 +124,14 @@ def process(raw):
 
 def main():
     now = datetime.now(TW)
-    print(f"[{now.strftime('%Y-%m-%d %H:%M')}] 開始抓取 TAIFEX 個股期貨資料...")
+    print(f"[{now.strftime('%Y-%m-%d %H:%M')}] 開始抓取個股期貨資料...")
 
+    # 1. 抓名稱對照表
+    name_map = fetch_name_map()
+    if not name_map:
+        name_map = FALLBACK_NAME_MAP
+
+    # 2. 抓行情資料
     try:
         raw = fetch_daily_report()
         print(f"  原始資料筆數: {len(raw)}")
@@ -107,7 +139,8 @@ def main():
         print(f"  ❌ 抓取失敗: {e}")
         sys.exit(1)
 
-    data = process(raw)
+    # 3. 處理資料
+    data = process(raw, name_map)
     print(f"  處理後筆數: {len(data)}")
 
     if not data:
@@ -128,3 +161,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+# placeholder
