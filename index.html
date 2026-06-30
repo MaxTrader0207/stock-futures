@@ -40,7 +40,8 @@
         .card { background: var(--card); border-radius: 9px; padding: 9px 11px;
                 margin-bottom: 6px; box-shadow: var(--shadow);
                 display: flex; align-items: flex-start; gap: 8px; }
-        .card.high-amp { background: #f5f0e1 !important; }
+        .amp-highlight { color: #7b2cbf; font-weight: 700;
+                         background: #fff59d; padding: 1px 5px; border-radius: 3px; }
         .rank { width: 22px; height: 22px; border-radius: 50%; display: flex;
                 align-items: center; justify-content: center; margin-top: 1px;
                 font-size: 11px; font-weight: 700; flex-shrink: 0; }
@@ -229,8 +230,12 @@ function renderList(id, rows, type) {
             : `未平倉 ${d.openInterest.toLocaleString()}　成交量 ${d.volume.toLocaleString()}`;
 
         // 第二行：振幅 + 月均量
+        const isHighAmp = d.amplitude !== null && d.amplitude !== undefined && d.amplitude > 8;
         const ampStr = (d.amplitude !== null && d.amplitude !== undefined)
-            ? `振幅 ${d.amplitude.toFixed(2)}%` : '';
+            ? (isHighAmp
+                ? `<span class="amp-highlight">振幅 ${d.amplitude.toFixed(2)}%</span>`
+                : `振幅 ${d.amplitude.toFixed(2)}%`)
+            : '';
         const mavStr = (d.monthlyAvgVolume !== null && d.monthlyAvgVolume !== undefined)
             ? `月均量 ${d.monthlyAvgVolume.toLocaleString()}` : '';
         const meta2 = [ampStr, mavStr].filter(Boolean).join('　');
@@ -250,9 +255,7 @@ function renderList(id, rows, type) {
             oiHtml = `<span class="bias-tag ${ocClass}">OI ${ocStr}</span>`;
         }
 
-        const highAmpClass = (d.amplitude !== null && d.amplitude !== undefined && d.amplitude > 8) ? ' high-amp' : '';
-
-        return `<div class="card${highAmpClass}">
+        return `<div class="card">
             <div class="rank ${type}">${i+1}</div>
             <div class="card-body">
                 <div class="stock-name">${d.name}${d.stockId ? `<span class="sid-tag">${d.stockId}</span>` : ''}</div>
