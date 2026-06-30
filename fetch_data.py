@@ -20,6 +20,7 @@ FALLBACK_NAME_MAP = {
     "TE":"電子期貨:","ZEF":"小型電子期貨:","SOF":"半導體30期貨:","TF":"金融期貨:",
     "ZFF":"小型金融期貨:","XIF":"非金電期貨:","TJF":"東證期貨:","GTF":"櫃買期貨:",
     "G2F":"富櫃200期貨:","E4F":"永續期貨:","BTF":"生技期貨:","SHF":"航運期貨:",
+    "GDF":"黃金期貨:","F1F":"富時台灣期貨:","FT1":"富時台灣期貨:","BRF":"布蘭特原油期貨:",
 }
 
 def fetch_name_map():
@@ -142,7 +143,7 @@ def process(raw, name_map):
     INDEX_FUTURES = {
         "TX","MTX","TMF","M1F","TE","ZEF","SOF","TF","ZFF","XIF","TJF",
         "XJF","XEF","XBF","UNF","UDF","TGF","SXF","RHF","QO1",
-        "GTF","G2F","E4F","BTF","SHF","NQF",
+        "GTF","G2F","E4F","BTF","SHF","NQF","GDF","F1F","FT1","BRF",
     }
     real_unmatched = [c for c in unmatched if c not in INDEX_FUTURES]
     if real_unmatched:
