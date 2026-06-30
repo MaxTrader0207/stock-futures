@@ -1,8 +1,13 @@
 """
 個股期貨動能排行 - 資料抓取腳本
 資料來源：
-  - 行情：臺灣期貨交易所 OpenAPI /DailyMarketReportFut
+  - 期貨行情：臺灣期貨交易所 OpenAPI /DailyMarketReportFut
   - 名稱對照：臺灣期貨交易所官方開放資料 SSFLists（股票期貨交易標的）
+
+擴充欄位（皆由期貨自身歷史資料計算，零外部依賴）：
+  - 開高低、振幅：取自當日行情欄位
+  - OI增減：與前一交易日未平倉量比較（history.json 累積）
+  - 月均量：近20個交易日成交量平均（history.json 累積）
 """
 import requests, json, sys, csv, io
 from datetime import datetime, timezone, timedelta
@@ -83,7 +88,7 @@ def get_name_stock(code, name_map):
 def to_float(s, default=0.0):
     try:
         return float(str(s).replace(",","").replace("%","").strip())
-    except:
+    except (ValueError, AttributeError):
         return default
 
 def to_int(s, default=0):
@@ -91,6 +96,76 @@ def to_int(s, default=0):
         return int(str(s).replace(",","").strip())
     except:
         return default
+
+HISTORY_FILE = "history.json"
+HISTORY_KEEP_DAYS = 25  # 保留略多於20天，確保月均量可計算
+
+def load_history():
+    """讀取期貨自身歷史記錄 {contract: {date: {oi, volume}}}"""
+    try:
+        with open(HISTORY_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        # 防呆：偵測是否為舊版格式（value 直接是數字，而非 {oi, volume} 物件）
+        for code, records in list(data.items())[:1]:
+            for date, val in records.items():
+                if not isinstance(val, dict):
+                    print("  ⚠ 偵測到舊版 history.json 格式，重新建立")
+                    return {}
+                break
+            break
+        return data
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+def save_history(history):
+    with open(HISTORY_FILE, "w", encoding="utf-8") as f:
+        json.dump(history, f, ensure_ascii=False)
+
+def update_history(history, date_str, data):
+    """把今日 OI、成交量寫入歷史，並裁切只保留最近 HISTORY_KEEP_DAYS 天"""
+    for item in data:
+        code = item["contract"]
+        if code not in history:
+            history[code] = {}
+        history[code][date_str] = {
+            "oi":     item["openInterest"],
+            "volume": item["volume"],
+        }
+
+    for code in history:
+        dates_sorted = sorted(history[code].keys(), reverse=True)
+        keep = dates_sorted[:HISTORY_KEEP_DAYS]
+        history[code] = {d: history[code][d] for d in keep}
+
+    return history
+
+def calc_oi_change(history, code, today_str, current_oi):
+    """
+    計算未平倉量較前一交易日的增減（口數）
+    歷史不足（無前一日資料）時回傳 None
+    """
+    records = history.get(code, {})
+    other_dates = sorted([d for d in records if d != today_str], reverse=True)
+    if not other_dates:
+        return None
+    prev_oi = records[other_dates[0]].get("oi")
+    if prev_oi is None:
+        return None
+    return current_oi - prev_oi
+
+def calc_monthly_avg_volume(history, code, today_str, current_volume):
+    """
+    計算近20個交易日（含今日）的平均成交量
+    可用天數不足時，以實際可用天數計算（至少需2天才有意義）
+    """
+    records = dict(history.get(code, {}))
+    records[today_str] = {"oi": None, "volume": current_volume}  # 確保今日算入
+    dates_sorted = sorted(records.keys(), reverse=True)
+    last_n = dates_sorted[:20]
+    volumes = [records[d]["volume"] for d in last_n if records[d].get("volume") is not None]
+    if len(volumes) < 2:
+        return None
+    return round(sum(volumes) / len(volumes))
 
 def fetch_daily_report():
     r = requests.get(
@@ -118,12 +193,22 @@ def process(raw, name_map):
         row = rows[0]
 
         close       = to_float(row.get("Last") or row.get("SettlementPrice", 0))
+        open_price  = to_float(row.get("Open", 0))
+        high_price  = to_float(row.get("High", 0))
+        low_price   = to_float(row.get("Low", 0))
+        change      = to_float(row.get("Change", 0))
         change_rate = to_float(row.get("%", 0))
         volume      = to_int(row.get("Volume", 0))
         oi          = to_int(row.get("OpenInterest", 0))
 
         if volume == 0:
             continue
+
+        # 振幅 = (最高-最低) / 前一日收盤(=今收-漲跌) × 100%
+        prev_close = close - change
+        amplitude = None
+        if prev_close > 0 and high_price and low_price:
+            amplitude = round((high_price - low_price) / prev_close * 100, 2)
 
         name, stock_id = get_name_stock(code, name_map)
         if name == code + "期貨":
@@ -134,7 +219,12 @@ def process(raw, name_map):
             "name":         name,
             "stockId":      stock_id,
             "close":        close,
+            "open":         open_price,
+            "high":         high_price,
+            "low":          low_price,
+            "change":       round(change, 2),
             "changeRate":   round(change_rate, 2),
+            "amplitude":    amplitude,
             "volume":       volume,
             "openInterest": oi,
         })
@@ -155,6 +245,7 @@ def process(raw, name_map):
 
 def main():
     now = datetime.now(TW)
+    today_str = now.strftime("%Y-%m-%d")
     print(f"[{now.strftime('%Y-%m-%d %H:%M')}] 開始抓取個股期貨資料...")
 
     name_map = fetch_name_map()
@@ -175,9 +266,33 @@ def main():
         print("  ⚠ 無有效資料，可能尚未收盤或非交易日")
         sys.exit(0)
 
+    # ── OI增減 / 月均量計算（皆來自期貨自身歷史，零外部依賴） ──────────
+    history = load_history()
+
+    oi_ready_count = 0
+    vol_ready_count = 0
+    for item in data:
+        code = item["contract"]
+
+        oi_change = calc_oi_change(history, code, today_str, item["openInterest"])
+        item["oiChange"] = oi_change
+        if oi_change is not None:
+            oi_ready_count += 1
+
+        monthly_avg_vol = calc_monthly_avg_volume(history, code, today_str, item["volume"])
+        item["monthlyAvgVolume"] = monthly_avg_vol
+        if monthly_avg_vol is not None:
+            vol_ready_count += 1
+
+    history = update_history(history, today_str, data)
+    save_history(history)
+
+    print(f"  OI增減：{oi_ready_count}/{len(data)} 檔已可計算（首次執行無前一日資料屬正常）")
+    print(f"  月均量：{vol_ready_count}/{len(data)} 檔已可計算（隨天數增加會更準確，最多採近20交易日）")
+
     output = {
         "updateTime": now.strftime("%Y-%m-%d %H:%M"),
-        "date":       now.strftime("%Y-%m-%d"),
+        "date":       today_str,
         "count":      len(data),
         "data":       data,
     }
