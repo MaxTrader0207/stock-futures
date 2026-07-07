@@ -1,6 +1,6 @@
 {
-  "updateTime": "2026-07-07 23:19",
-  "date": "2026-07-07",
+  "updateTime": "2026-07-08 00:24",
+  "date": "2026-07-08",
   "count": 329,
   "data": [
     {
@@ -821,7 +821,7 @@
     },
     {
       "contract": "SPF",
-      "name": "SPF期貨",
+      "name": "標普500期貨",
       "stockId": "",
       "close": 7550.5,
       "open": 7567.5,
@@ -917,7 +917,7 @@
     },
     {
       "contract": "SK1",
-      "name": "SK1期貨",
+      "name": "韓國指數期貨",
       "stockId": "",
       "close": 91.0,
       "open": 90.0,
@@ -1141,7 +1141,7 @@
     },
     {
       "contract": "RTF",
-      "name": "RTF期貨",
+      "name": "小型人民幣期貨",
       "stockId": "",
       "close": 6.7873,
       "open": 6.7895,
@@ -2069,7 +2069,7 @@
     },
     {
       "contract": "PL1",
-      "name": "PL1期貨",
+      "name": "鉑金期貨",
       "stockId": "",
       "close": 163.5,
       "open": 157.0,
