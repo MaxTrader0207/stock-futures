@@ -2,8 +2,9 @@ name: 每日更新個股期貨資料
 
 on:
   schedule:
-    # 台灣時間 16:30（UTC 08:30）執行，確保 TAIFEX 資料完整更新後再抓
-    - cron: '30 8 * * 1-5'
+    # 台灣時間 隔日 08:30（UTC 00:30）執行
+    # TAIFEX API 在收盤後數小時才完成入庫，隔日早上抓取最穩定
+    - cron: '30 0 * * 2-6'
   workflow_dispatch:  # 允許手動觸發
 
 jobs:
