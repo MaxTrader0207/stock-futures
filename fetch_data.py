@@ -176,6 +176,21 @@ def fetch_daily_report():
     r.raise_for_status()
     return r.json()
 
+def check_data_date(raw, today_str):
+    """確認 API 回傳資料是否為當日，若非當日發出警告"""
+    if not raw:
+        return
+    # API Date 格式為 YYYYMMDD，轉成 YYYY-MM-DD 比對
+    api_date_raw = raw[0].get("Date", "")
+    if len(api_date_raw) == 8:
+        api_date = f"{api_date_raw[:4]}-{api_date_raw[4:6]}-{api_date_raw[6:]}"
+    else:
+        api_date = api_date_raw
+    if api_date != today_str:
+        print(f"  ⚠ 注意：API 資料日期為 {api_date}，今日為 {today_str}，可能為前一交易日資料")
+    else:
+        print(f"  ✅ API 資料日期確認為當日 {api_date}")
+
 def process(raw, name_map):
     regular = [r for r in raw if r.get("TradingSession","").strip() == "一般"]
     print(f"  一般時段筆數: {len(regular)}")
@@ -260,6 +275,7 @@ def main():
     try:
         raw = fetch_daily_report()
         print(f"  原始資料筆數: {len(raw)}")
+        check_data_date(raw, today_str)
     except Exception as e:
         print(f"  ❌ 抓取失敗: {e}")
         sys.exit(1)
