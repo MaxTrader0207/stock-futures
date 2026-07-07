@@ -189,8 +189,16 @@ def process(raw, name_map):
     results = []
     unmatched = []
     for code, rows in by_code.items():
-        rows.sort(key=lambda r: to_int(r.get("Volume",0)), reverse=True)
+        # 取最近月：合約月份最小的那筆（ContractMonth/Week 格式為 YYYYMM 或 YYYYMMW）
+        rows.sort(key=lambda r: r.get("ContractMonth/Week", "9999"))
         row = rows[0]
+
+        # 確保近月合約有成交，否則取成交量最大的
+        if to_int(row.get("Volume", 0)) == 0:
+            rows_with_vol = [r for r in rows if to_int(r.get("Volume", 0)) > 0]
+            if not rows_with_vol:
+                continue
+            row = rows_with_vol[0]
 
         close       = to_float(row.get("Last") or row.get("SettlementPrice", 0))
         open_price  = to_float(row.get("Open", 0))
@@ -200,9 +208,6 @@ def process(raw, name_map):
         change_rate = to_float(row.get("%", 0))
         volume      = to_int(row.get("Volume", 0))
         oi          = to_int(row.get("OpenInterest", 0))
-
-        if volume == 0:
-            continue
 
         # 振幅 = (最高-最低) / 前一日收盤(=今收-漲跌) × 100%
         prev_close = close - change
