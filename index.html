@@ -179,7 +179,7 @@ async function loadData() {
         const json = await r.json();
 
         allData = json.data || [];
-        document.getElementById('update-time').textContent = `資料日期：${json.date || json.updateTime}`;
+        document.getElementById('update-time').textContent = `前一交易日收盤資料：${json.date || json.updateTime}`;
         renderAll();
     } catch(e) {
         document.getElementById('update-time').textContent = '載入失敗';
